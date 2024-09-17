@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+body{
+    background-color: #DCF2F1;
+    font-family: "Pacifico", monospace;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    color: white;
+    background-color: #0F1035;
+    font-size: 10px;
+}
+
+.theme-button{
+    border-radius: 3px solid #0F1035;
+    background-color: #7FC7D9;
+    font-size: 15px;
+}
+
+.theme-button:hover{
+    background-color: #7FC7D9;
+    box-shadow: 0 0 150px .5px rgb(0,0,0);
+    transform:rotate(4deg);
+}

@@ -1,0 +1,1 @@
+const theme_button = document.querySelector('.theme-button')
