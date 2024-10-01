@@ -14,19 +14,13 @@ h1 {
     font-size: 50px;
 }
 
-.header {
+header {
     color: #fff;
     background-color: #0F1035;
+    font-family: "Pacifico", monospace;
     font-size: 20px;
     text-align: center;
     padding: 20px;
-    opacity: 0;
-    transform: translateY(-50px);
-    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 600px;
-    display: none;
 }
 
 .header.visible {
@@ -165,9 +159,9 @@ h1 {
     background-color: #7FC7D9;
     padding: 10px;
     border: none;
-    color: white;
     cursor: pointer;
     border-radius: 5px;
+    border: 3px solid black;
     font-size: 14px;
     margin-right: 10px;
     transition: background-color 0.3s ease;

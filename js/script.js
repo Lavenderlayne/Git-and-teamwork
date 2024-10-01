@@ -7,39 +7,28 @@ let statisticsDisplay = document.querySelector('.statistics');
 let timerDisplay = document.querySelector('.timer');
 let difficulty_buttons = document.querySelector('.difficulty-buttons')
 
-// Масив питань для різних квізів
-const quiz1 = [
-    {
-        question: 'Яка столиця Франції?',
-        answers: ['Берлін', 'Мадрид', 'Париж', 'Рим'],
-        correct: 'Париж'
-    },
-    {
-        question: 'Який океан найбільший?',
-        answers: ['Тихий', 'Атлантичний', 'Індійський', 'Північний Льодовитий'],
-        correct: 'Тихий'
-    },
-    {
-        question: 'Скільки континентів на Землі?',
-        answers: ['5', '6', '7', '8'],
-        correct: '7'
-    },
-    {
-        question: 'Яка планета найближча до Сонця?',
-        answers: ['Меркурій', 'Венера', 'Марс', 'Земля'],
-        correct: 'Меркурій'
-    }
-    // Додай ще питання
-];
+async function getQuestions(file_name) {
+    let response = await fetch(file_name)
+    let questions = await response.json()
+    return questions
+}
+let questions_eng = []
+let questions_sport = []
+let questions_game = []
+let questions_geo = []
 
-const quiz2 = [
-    {
-        question: 'Яка планета найближча до Сонця',
-        answers: ['Меркурій', 'Венера', 'Марс', 'Земля'],
-        correct: 'Меркурій'
-    }
-    // Додай ще питання
-];
+getQuestions("questions1.json").then(function (questions) {
+    questions_eng = questions
+})
+getQuestions("questions2.json").then(function (questions) {
+    questions_sport = questions
+})
+getQuestions("questions3.json").then(function (questions) {
+    questions_game = questions
+})
+getQuestions("questions4.json").then(function (questions) {
+    questions_geo = questions
+})
 
 // Додавання складності
 const difficultyLevels = {
@@ -67,13 +56,17 @@ document.querySelectorAll('.theme-button').forEach(button => {
         // Вибір квіза на основі вибраної теми
         switch (selectedTheme) {
             case 'Виберіть першу тему квіза':
-                selectedQuiz = quiz1;
+                selectedQuiz = questions_eng;
                 break;
             case 'Виберіть другу тему квіза':
-                selectedQuiz = quiz2;
+                selectedQuiz = questions_sport;
+                break;
+
+            case 'Виберіть другу тему квіза':
+                selectedQuiz = questions_game;
                 break;
             default:
-                selectedQuiz = quiz1;
+                selectedQuiz = questions_geo;
         }
 
         // Приховуємо екран вибору теми і показуємо екран питань
@@ -179,14 +172,17 @@ document.querySelectorAll('.theme-button').forEach(button => {
 
         // Select quiz based on chosen theme
         switch (selectedTheme) {
-            case 'Географія':
+            case 'English':
                 selectedQuiz = questions1.json;
                 break;
-            case 'Виберіть другу тему квіза':
-                selectedQuiz = quiz2;
+            case 'Sport':
+                selectedQuiz = questions_sport;
                 break;
-            case 'Geography Quiz':  // Add this case for geography
-                selectedQuiz = geographyQuiz;
+            case 'Game':  // Add this case for geography
+                selectedQuiz = questions_game;
+                break;
+            case 'Geography':  // Add this case for geography
+                selectedQuiz = questions_geo;
                 break;
             default:
                 selectedQuiz = quiz1;
