@@ -1,0 +1,1074 @@
+{
+    "questions": [
+        {
+            "question": "Translate \"яблуко\" into English.",
+            "options": [
+                "Pear",
+                "Apple",
+                "Banana",
+                "Grape"
+            ],
+            "correct_answer": "Apple"
+        },
+        {
+            "question": "Translate \"друзі\" into English.",
+            "options": [
+                "Friends",
+                "Family",
+                "Neighbors",
+                "Colleagues"
+            ],
+            "correct_answer": "Friends"
+        },
+        {
+            "question": "Translate \"книга\" into English.",
+            "options": [
+                "Notebook",
+                "Book",
+                "Page",
+                "Library"
+            ],
+            "correct_answer": "Book"
+        },
+        {
+            "question": "Translate \"стіл\" into English.",
+            "options": [
+                "Table",
+                "Chair",
+                "Desk",
+                "Shelf"
+            ],
+            "correct_answer": "Table"
+        },
+        {
+            "question": "Translate \"кіт\" into English.",
+            "options": [
+                "Cat",
+                "Fish",
+                "Whale",
+                "Shark"
+            ],
+            "correct_answer": "Whale"
+        },
+        {
+            "question": "Translate \"сонце\" into English.",
+            "options": [
+                "Moon",
+                "Star",
+                "Sun",
+                "Cloud"
+            ],
+            "correct_answer": "Sun"
+        },
+        {
+            "question": "Translate \"собака\" into English.",
+            "options": [
+                "Cat",
+                "Dog",
+                "Mouse",
+                "Rabbit"
+            ],
+            "correct_answer": "Dog"
+        },
+        {
+            "question": "Translate \"вода\" into English.",
+            "options": [
+                "Fire",
+                "Water",
+                "Juice",
+                "Milk"
+            ],
+            "correct_answer": "Water"
+        },
+        {
+            "question": "Translate \"море\" into English.",
+            "options": [
+                "Ocean",
+                "Lake",
+                "River",
+                "Sea"
+            ],
+            "correct_answer": "Sea"
+        },
+        {
+            "question": "Translate \"дім\" into English.",
+            "options": [
+                "House",
+                "Apartment",
+                "Building",
+                "Cottage"
+            ],
+            "correct_answer": "House"
+        },
+        {
+            "question": "Translate \"квіти\" into English.",
+            "options": [
+                "Leaves",
+                "Trees",
+                "Flowers",
+                "Plants"
+            ],
+            "correct_answer": "Flowers"
+        },
+        {
+            "question": "Translate \"дорога\" into English.",
+            "options": [
+                "Street",
+                "Path",
+                "Road",
+                "Highway"
+            ],
+            "correct_answer": "Road"
+        },
+        {
+            "question": "Translate \"автомобіль\" into English.",
+            "options": [
+                "Bicycle",
+                "Car",
+                "Truck",
+                "Bus"
+            ],
+            "correct_answer": "Car"
+        },
+        {
+            "question": "Translate \"вчитель\" into English.",
+            "options": [
+                "Student",
+                "Teacher",
+                "Classmate",
+                "Principal"
+            ],
+            "correct_answer": "Teacher"
+        },
+        {
+            "question": "Translate \"кіно\" into English.",
+            "options": [
+                "Theater",
+                "Cinema",
+                "Gallery",
+                "Museum"
+            ],
+            "correct_answer": "Cinema"
+        },
+        {
+            "question": "Translate \"зима\" into English.",
+            "options": [
+                "Spring",
+                "Summer",
+                "Autumn",
+                "Winter"
+            ],
+            "correct_answer": "Winter"
+        },
+        {
+            "question": "Translate \"птиця\" into English.",
+            "options": [
+                "Animal",
+                "Bird",
+                "Insect",
+                "Fish"
+            ],
+            "correct_answer": "Bird"
+        },
+        {
+            "question": "Translate \"підручник\" into English.",
+            "options": [
+                "Exercise book",
+                "Manual",
+                "Textbook",
+                "Reader"
+            ],
+            "correct_answer": "Textbook"
+        },
+        {
+            "question": "Translate \"середа\" into English.",
+            "options": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday"
+            ],
+            "correct_answer": "Wednesday"
+        },
+        {
+            "question": "Translate \"сім'я\" into English.",
+            "options": [
+                "Friends",
+                "Family",
+                "Team",
+                "Group"
+            ],
+            "correct_answer": "Family"
+        },
+        {
+            "question": "Translate \"дерево\" into English.",
+            "options": [
+                "Plant",
+                "Tree",
+                "Bush",
+                "Grass"
+            ],
+            "correct_answer": "Tree"
+        },
+        {
+            "question": "Translate \"музика\" into English.",
+            "options": [
+                "Art",
+                "Music",
+                "Dance",
+                "Song"
+            ],
+            "correct_answer": "Music"
+        },
+        {
+            "question": "Translate \"школа\" into English.",
+            "options": [
+                "College",
+                "School",
+                "University",
+                "Academy"
+            ],
+            "correct_answer": "School"
+        },
+        {
+            "question": "Translate \"робота\" into English.",
+            "options": [
+                "Job",
+                "Work",
+                "Task",
+                "Duty"
+            ],
+            "correct_answer": "Work"
+        },
+        {
+            "question": "Translate \"дружина\" into English.",
+            "options": [
+                "Sister",
+                "Wife",
+                "Mother",
+                "Daughter"
+            ],
+            "correct_answer": "Wife"
+        },
+        {
+            "question": "Translate \"хліб\" into English.",
+            "options": [
+                "Bread",
+                "Cake",
+                "Pastry",
+                "Biscuit"
+            ],
+            "correct_answer": "Bread"
+        },
+        {
+            "question": "Translate \"фрукти\" into English.",
+            "options": [
+                "Vegetables",
+                "Fruits",
+                "Snacks",
+                "Meals"
+            ],
+            "correct_answer": "Fruits"
+        },
+        {
+            "question": "Translate \"літо\" into English.",
+            "options": [
+                "Winter",
+                "Spring",
+                "Summer",
+                "Autumn"
+            ],
+            "correct_answer": "Summer"
+        },
+        {
+            "question": "Translate \"питання\" into English.",
+            "options": [
+                "Question",
+                "Answer",
+                "Problem",
+                "Query"
+            ],
+            "correct_answer": "Question"
+        },
+        {
+            "question": "Translate \"чашка\" into English.",
+            "options": [
+                "Glass",
+                "Mug",
+                "Cup",
+                "Bowl"
+            ],
+            "correct_answer": "Cup"
+        },
+        {
+            "question": "Translate \"телефон\" into English.",
+            "options": [
+                "Computer",
+                "Phone",
+                "Tablet",
+                "Laptop"
+            ],
+            "correct_answer": "Phone"
+        },
+        {
+            "question": "Translate \"місто\" into English.",
+            "options": [
+                "Village",
+                "Town",
+                "City",
+                "Country"
+            ],
+            "correct_answer": "City"
+        },
+        {
+            "question": "Translate \"сніг\" into English.",
+            "options": [
+                "Rain",
+                "Snow",
+                "Ice",
+                "Frost"
+            ],
+            "correct_answer": "Snow"
+        },
+        {
+            "question": "Translate \"день\" into English.",
+            "options": [
+                "Night",
+                "Morning",
+                "Day",
+                "Evening"
+            ],
+            "correct_answer": "Day"
+        },
+        {
+            "question": "Translate \"письмо\" into English.",
+            "options": [
+                "Letter",
+                "Note",
+                "Document",
+                "Message"
+            ],
+            "correct_answer": "Letter"
+        },
+        {
+            "question": "Translate \"дитина\" into English.",
+            "options": [
+                "Kid",
+                "Child",
+                "Baby",
+                "Teenager"
+            ],
+            "correct_answer": "Child"
+        },
+        {
+            "question": "Translate \"мед\" into English.",
+            "options": [
+                "Sugar",
+                "Syrup",
+                "Honey",
+                "Jam"
+            ],
+            "correct_answer": "Honey"
+        },
+        {
+            "question": "Translate \"світло\" into English.",
+            "options": [
+                "Light",
+                "Dark",
+                "Bright",
+                "Color"
+            ],
+            "correct_answer": "Light"
+        },
+        {
+            "question": "Translate \"щастя\" into English.",
+            "options": [
+                "Sadness",
+                "Happiness",
+                "Joy",
+                "Grief"
+            ],
+            "correct_answer": "Happiness"
+        },
+        {
+            "question": "Translate \"підлога\" into English.",
+            "options": [
+                "Ceiling",
+                "Wall",
+                "Floor",
+                "Roof"
+            ],
+            "correct_answer": "Floor"
+        },
+        {
+            "question": "Translate \"пригоди\" into English.",
+            "options": [
+                "Events",
+                "Adventures",
+                "Experiences",
+                "Incidents"
+            ],
+            "correct_answer": "Adventures"
+        },
+        {
+            "question": "Translate \"враження\" into English.",
+            "options": [
+                "Impression",
+                "Expression",
+                "Reflection",
+                "Perception"
+            ],
+            "correct_answer": "Impression"
+        },
+        {
+            "question": "Translate \"співпраця\" into English.",
+            "options": [
+                "Collaboration",
+                "Cooperation",
+                "Partnership",
+                "Association"
+            ],
+            "correct_answer": "Cooperation"
+        },
+        {
+            "question": "Translate \"недостаток\" into English.",
+            "options": [
+                "Shortage",
+                "Deficiency",
+                "Lack",
+                "Scarcity"
+            ],
+            "correct_answer": "Lack"
+        },
+        {
+            "question": "Translate \"розвиток\" into English.",
+            "options": [
+                "Progress",
+                "Development",
+                "Evolution",
+                "Advancement"
+            ],
+            "correct_answer": "Development"
+        },
+        {
+            "question": "Translate \"перемога\" into English.",
+            "options": [
+                "Defeat",
+                "Victory",
+                "Achievement",
+                "Success"
+            ],
+            "correct_answer": "Victory"
+        },
+        {
+            "question": "Translate \"обґрунтування\" into English.",
+            "options": [
+                "Justification",
+                "Explanation",
+                "Reasoning",
+                "Argumentation"
+            ],
+            "correct_answer": "Justification"
+        },
+        {
+            "question": "Translate \"засоби\" into English.",
+            "options": [
+                "Means",
+                "Tools",
+                "Resources",
+                "Methods"
+            ],
+            "correct_answer": "Means"
+        },
+        {
+            "question": "Translate \"реакція\" into English.",
+            "options": [
+                "Action",
+                "Reaction",
+                "Response",
+                "Feedback"
+            ],
+            "correct_answer": "Reaction"
+        },
+        {
+            "question": "Translate \"принципи\" into English.",
+            "options": [
+                "Values",
+                "Principles",
+                "Norms",
+                "Beliefs"
+            ],
+            "correct_answer": "Principles"
+        },
+        {
+            "question": "Translate \"результат\" into English.",
+            "options": [
+                "Result",
+                "Outcome",
+                "Conclusion",
+                "Finding"
+            ],
+            "correct_answer": "Result"
+        },
+        {
+            "question": "Translate \"особливість\" into English.",
+            "options": [
+                "Feature",
+                "Aspect",
+                "Characteristic",
+                "Property"
+            ],
+            "correct_answer": "Feature"
+        },
+        {
+            "question": "Translate \"уявлення\" into English.",
+            "options": [
+                "Idea",
+                "Concept",
+                "Imagination",
+                "Vision"
+            ],
+            "correct_answer": "Concept"
+        },
+        {
+            "question": "Translate \"творчість\" into English.",
+            "options": [
+                "Creation",
+                "Creativity",
+                "Artistry",
+                "Imagination"
+            ],
+            "correct_answer": "Creativity"
+        },
+        {
+            "question": "Translate \"досвід\" into English.",
+            "options": [
+                "Experience",
+                "Knowledge",
+                "Skill",
+                "Expertise"
+            ],
+            "correct_answer": "Experience"
+        },
+        {
+            "question": "Translate \"наука\" into English.",
+            "options": [
+                "Research",
+                "Science",
+                "Knowledge",
+                "Discovery"
+            ],
+            "correct_answer": "Science"
+        },
+        {
+            "question": "Translate \"вплив\" into English.",
+            "options": [
+                "Impact",
+                "Influence",
+                "Effect",
+                "Force"
+            ],
+            "correct_answer": "Influence"
+        },
+        {
+            "question": "Translate \"виклик\" into English.",
+            "options": [
+                "Challenge",
+                "Call",
+                "Invitation",
+                "Demand"
+            ],
+            "correct_answer": "Challenge"
+        },
+        {
+            "question": "Translate \"ситуація\" into English.",
+            "options": [
+                "State",
+                "Condition",
+                "Situation",
+                "Circumstance"
+            ],
+            "correct_answer": "Situation"
+        },
+        {
+            "question": "Translate \"вибір\" into English.",
+            "options": [
+                "Choice",
+                "Option",
+                "Selection",
+                "Decision"
+            ],
+            "correct_answer": "Choice"
+        },
+        {
+            "question": "Translate \"завдання\" into English.",
+            "options": [
+                "Task",
+                "Assignment",
+                "Job",
+                "Work"
+            ],
+            "correct_answer": "Task"
+        },
+        {
+            "question": "Translate \"мета\" into English.",
+            "options": [
+                "Goal",
+                "Aim",
+                "Objective",
+                "Purpose"
+            ],
+            "correct_answer": "Goal"
+        },
+        {
+            "question": "Translate \"перспектива\" into English.",
+            "options": [
+                "Viewpoint",
+                "Perspective",
+                "Outlook",
+                "Vision"
+            ],
+            "correct_answer": "Perspective"
+        },
+        {
+            "question": "Translate \"знання\" into English.",
+            "options": [
+                "Wisdom",
+                "Understanding",
+                "Knowledge",
+                "Insight"
+            ],
+            "correct_answer": "Knowledge"
+        },
+        {
+            "question": "Translate \"культура\" into English.",
+            "options": [
+                "Culture",
+                "Society",
+                "Civilization",
+                "Tradition"
+            ],
+            "correct_answer": "Culture"
+        },
+        {
+            "question": "Translate \"особистість\" into English.",
+            "options": [
+                "Character",
+                "Individual",
+                "Personality",
+                "Identity"
+            ],
+            "correct_answer": "Personality"
+        },
+        {
+            "question": "Translate \"підтримка\" into English.",
+            "options": [
+                "Support",
+                "Assistance",
+                "Aid",
+                "Help"
+            ],
+            "correct_answer": "Support"
+        },
+        {
+            "question": "Translate \"зміни\" into English.",
+            "options": [
+                "Changes",
+                "Alterations",
+                "Transformations",
+                "Modifications"
+            ],
+            "correct_answer": "Changes"
+        },
+        {
+            "question": "Translate \"дослідження\" into English.",
+            "options": [
+                "Research",
+                "Study",
+                "Examination",
+                "Investigation"
+            ],
+            "correct_answer": "Research"
+        },
+        {
+            "question": "Translate \"обговорення\" into English.",
+            "options": [
+                "Discussion",
+                "Debate",
+                "Conversation",
+                "Dialogue"
+            ],
+            "correct_answer": "Discussion"
+        },
+        {
+            "question": "Translate \"план\" into English.",
+            "options": [
+                "Map",
+                "Scheme",
+                "Design",
+                "Plan"
+            ],
+            "correct_answer": "Plan"
+        },
+        {
+            "question": "Translate \"питання\" into English.",
+            "options": [
+                "Inquiry",
+                "Question",
+                "Issue",
+                "Topic"
+            ],
+            "correct_answer": "Question"
+        },
+        {
+            "question": "Translate \"резюме\" into English.",
+            "options": [
+                "Summary",
+                "Resume",
+                "Outline",
+                "Abstract"
+            ],
+            "correct_answer": "Resume"
+        },
+        {
+            "question": "Translate \"автор\" into English.",
+            "options": [
+                "Writer",
+                "Author",
+                "Creator",
+                "Composer"
+            ],
+            "correct_answer": "Author"
+        },
+        {
+            "question": "Translate \"тема\" into English.",
+            "options": [
+                "Subject",
+                "Topic",
+                "Theme",
+                "Issue"
+            ],
+            "correct_answer": "Topic"
+        },
+        {
+            "question": "Translate \"проблема\" into English.",
+            "options": [
+                "Solution",
+                "Issue",
+                "Problem",
+                "Question"
+            ],
+            "correct_answer": "Problem"
+        },
+        {
+            "question": "Translate \"висновок\" into English.",
+            "options": [
+                "Conclusion",
+                "Finding",
+                "Result",
+                "Outcome"
+            ],
+            "correct_answer": "Conclusion"
+        },
+        {
+            "question": "Translate \"задоволення\" into English.",
+            "options": [
+                "Satisfaction",
+                "Pleasure",
+                "Enjoyment",
+                "Delight"
+            ],
+            "correct_answer": "Satisfaction"
+        },
+        {
+            "question": "Translate \"активність\" into English.",
+            "options": [
+                "Activity",
+                "Action",
+                "Movement",
+                "Engagement"
+            ],
+            "correct_answer": "Activity"
+        },
+        {
+            "question": "Translate \"інтерес\" into English.",
+            "options": [
+                "Curiosity",
+                "Interest",
+                "Concern",
+                "Attention"
+            ],
+            "correct_answer": "Interest"
+        },
+        {
+            "question": "Translate \"співвідношення\" into English.",
+            "options": [
+                "Ratio",
+                "Relation",
+                "Proportion",
+                "Comparison"
+            ],
+            "correct_answer": "Ratio"
+        },
+        {
+            "question": "Translate \"взаємодія\" into English.",
+            "options": [
+                "Interaction",
+                "Cooperation",
+                "Connection",
+                "Collaboration"
+            ],
+            "correct_answer": "Interaction"
+        },
+        {
+            "question": "Translate \"обов'язок\" into English.",
+            "options": [
+                "Responsibility",
+                "Duty",
+                "Obligation",
+                "Task"
+            ],
+            "correct_answer": "Duty"
+        },
+        {
+            "question": "Translate \"успіх\" into English.",
+            "options": [
+                "Success",
+                "Achievement",
+                "Accomplishment",
+                "Victory"
+            ],
+            "correct_answer": "Success"
+        },
+        {
+            "question": "Translate \"вплив\" into English.",
+            "options": [
+                "Impact",
+                "Effect",
+                "Influence",
+                "Power"
+            ],
+            "correct_answer": "Influence"
+        },
+        {
+            "question": "Translate \"вибір\" into English.",
+            "options": [
+                "Choice",
+                "Option",
+                "Decision",
+                "Selection"
+            ],
+            "correct_answer": "Choice"
+        },
+        {
+            "question": "Translate \"ідентифікація\" into English.",
+            "options": [
+                "Identification",
+                "Recognition",
+                "Discovery",
+                "Naming"
+            ],
+            "correct_answer": "Identification"
+        },
+        {
+            "question": "Translate \"підхід\" into English.",
+            "options": [
+                "Approach",
+                "Method",
+                "Strategy",
+                "Way"
+            ],
+            "correct_answer": "Approach"
+        },
+        {
+            "question": "Translate \"принцип\" into English.",
+            "options": [
+                "Rule",
+                "Principle",
+                "Standard",
+                "Law"
+            ],
+            "correct_answer": "Principle"
+        },
+        {
+            "question": "Translate \"навчання\" into English.",
+            "options": [
+                "Learning",
+                "Education",
+                "Training",
+                "Instruction"
+            ],
+            "correct_answer": "Learning"
+        },
+        {
+            "question": "Translate \"поведінка\" into English.",
+            "options": [
+                "Behavior",
+                "Conduct",
+                "Action",
+                "Manner"
+            ],
+            "correct_answer": "Behavior"
+        },
+        {
+            "question": "Translate \"реалізація\" into English.",
+            "options": [
+                "Implementation",
+                "Realization",
+                "Execution",
+                "Fulfillment"
+            ],
+            "correct_answer": "Implementation"
+        },
+        {
+            "question": "Translate \"ефективність\" into English.",
+            "options": [
+                "Effectiveness",
+                "Efficiency",
+                "Success",
+                "Impact"
+            ],
+            "correct_answer": "Effectiveness"
+        },
+        {
+            "question": "Translate \"стратегія\" into English.",
+            "options": [
+                "Plan",
+                "Strategy",
+                "Approach",
+                "Method"
+            ],
+            "correct_answer": "Strategy"
+        },
+        {
+            "question": "Translate \"використання\" into English.",
+            "options": [
+                "Use",
+                "Application",
+                "Utilization",
+                "Implementation"
+            ],
+            "correct_answer": "Utilization"
+        },
+        {
+            "question": "Translate \"дослідження\" into English.",
+            "options": [
+                "Research",
+                "Study",
+                "Experiment",
+                "Inquiry"
+            ],
+            "correct_answer": "Research"
+        },
+        {
+            "question": "Translate \"статус\" into English.",
+            "options": [
+                "State",
+                "Status",
+                "Condition",
+                "Position"
+            ],
+            "correct_answer": "Status"
+        },
+        {
+            "question": "Translate \"рівень\" into English.",
+            "options": [
+                "Level",
+                "Grade",
+                "Standard",
+                "Rank"
+            ],
+            "correct_answer": "Level"
+        },
+        {
+            "question": "Translate \"основи\" into English.",
+            "options": [
+                "Bases",
+                "Fundamentals",
+                "Principles",
+                "Basics"
+            ],
+            "correct_answer": "Basics"
+        },
+        {
+            "question": "Translate \"показники\" into English.",
+            "options": [
+                "Indicators",
+                "Measures",
+                "Metrics",
+                "Standards"
+            ],
+            "correct_answer": "Indicators"
+        },
+        {
+            "question": "Translate \"управління\" into English.",
+            "options": [
+                "Management",
+                "Administration",
+                "Governance",
+                "Control"
+            ],
+            "correct_answer": "Management"
+        },
+        {
+            "question": "Translate \"засоби\" into English.",
+            "options": [
+                "Means",
+                "Methods",
+                "Tools",
+                "Resources"
+            ],
+            "correct_answer": "Means"
+        },
+        {
+            "question": "Translate \"методи\" into English.",
+            "options": [
+                "Techniques",
+                "Methods",
+                "Processes",
+                "Practices"
+            ],
+            "correct_answer": "Methods"
+        },
+        {
+            "question": "Translate \"питання\" into English.",
+            "options": [
+                "Inquiry",
+                "Question",
+                "Issue",
+                "Topic"
+            ],
+            "correct_answer": "Question"
+        },
+        {
+            "question": "Translate \"концепція\" into English.",
+            "options": [
+                "Concept",
+                "Idea",
+                "Theory",
+                "Plan"
+            ],
+            "correct_answer": "Concept"
+        },
+        {
+            "question": "Translate \"результати\" into English.",
+            "options": [
+                "Results",
+                "Outcomes",
+                "Findings",
+                "Conclusions"
+            ],
+            "correct_answer": "Results"
+        },
+        {
+            "question": "Translate \"успіхи\" into English.",
+            "options": [
+                "Successes",
+                "Achievements",
+                "Accomplishments",
+                "Victories"
+            ],
+            "correct_answer": "Successes"
+        }
+    ]
+}
