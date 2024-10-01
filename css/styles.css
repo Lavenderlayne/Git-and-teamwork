@@ -16,6 +16,7 @@ h1 {
 
 header {
     color: #fff;
+
     background-color: #0F1035;
     font-family: "Pacifico", monospace;
     font-size: 20px;
@@ -28,9 +29,11 @@ header {
     transform: translateY(0);
 }
 
+
 .main-screen {
     text-align: center;
     margin: 20px 0;
+
 }
 
 .theme-button {
@@ -47,11 +50,13 @@ header {
 .theme-button:hover {
     background-color: #7FC7D9;
     box-shadow: 0 0 150px 0.5px #000;
+
     transform: rotate(4deg);
 }
 
 .theme-button:active {
     transform: scale(0.95);
+
     box-shadow: 0 0 100px 0.5px #000;
 }
 
@@ -213,4 +218,5 @@ header {
 .theme-txt {
     padding-top: 1px;
     font-size: 40px;
+
 }
