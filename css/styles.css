@@ -16,6 +16,7 @@ h1 {
 
 .header {
     color: #fff;
+
     background-color: #0F1035;
     font-size: 20px;
     text-align: center;
@@ -26,7 +27,9 @@ h1 {
     margin-bottom: 20px;
     width: 100%;
     max-width: 600px;
+
     display: none;
+
 }
 
 .header.visible {
@@ -34,9 +37,11 @@ h1 {
     transform: translateY(0);
 }
 
+
 .main-screen {
     text-align: center;
     margin: 20px 0;
+
 }
 
 .theme-button {
@@ -53,11 +58,13 @@ h1 {
 .theme-button:hover {
     background-color: #7FC7D9;
     box-shadow: 0 0 150px 0.5px #000;
+
     transform: rotate(4deg);
 }
 
 .theme-button:active {
     transform: scale(0.95);
+
     box-shadow: 0 0 100px 0.5px #000;
 }
 
@@ -219,4 +226,5 @@ h1 {
 .theme-txt {
     padding-top: 1px;
     font-size: 40px;
+
 }
