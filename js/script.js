@@ -10,7 +10,7 @@ let difficulty_buttons = document.querySelector('.difficulty-buttons')
 async function getQuestions(file_name) {
     let response = await fetch(file_name)
     let questions = await response.json()
-    return questions
+    return questions["questions"]
 }
 let questions_eng = []
 let questions_sport = []
@@ -51,22 +51,25 @@ let questionLimit = 10;
 document.querySelectorAll('.theme-button').forEach(button => {
     button.addEventListener('click', () => {
         const selectedTheme = button.textContent;
-        applyTheme(selectedTheme);
+        // applyTheme(selectedTheme);
 
         // Вибір квіза на основі вибраної теми
         switch (selectedTheme) {
-            case 'Виберіть першу тему квіза':
+            case 'Англійська':
                 selectedQuiz = questions_eng;
+                console.log(selectedQuiz)
                 break;
-            case 'Виберіть другу тему квіза':
+            case 'Спорт':
                 selectedQuiz = questions_sport;
                 break;
-
-            case 'Виберіть другу тему квіза':
+            case 'Ігри':
                 selectedQuiz = questions_game;
                 break;
-            default:
+            case 'Географія':
                 selectedQuiz = questions_geo;
+                break;
+            default:
+                selectedQuiz = questions_eng;
         }
 
         // Приховуємо екран вибору теми і показуємо екран питань
@@ -165,37 +168,6 @@ answer_buttons.forEach(button => {
     });
 });
 
-document.querySelectorAll('.theme-button').forEach(button => {
-    button.addEventListener('click', () => {
-        const selectedTheme = button.textContent;
-        applyTheme(selectedTheme);
-
-        // Select quiz based on chosen theme
-        switch (selectedTheme) {
-            case 'English':
-                selectedQuiz = questions1.json;
-                break;
-            case 'Sport':
-                selectedQuiz = questions_sport;
-                break;
-            case 'Game':  // Add this case for geography
-                selectedQuiz = questions_game;
-                break;
-            case 'Geography':  // Add this case for geography
-                selectedQuiz = questions_geo;
-                break;
-            default:
-                selectedQuiz = quiz1;
-        }
-
-        // Hide theme selection screen and show question screen
-        mainScreen.style.display = 'none';
-        document.querySelector('.question-screen').style.display = 'block';
-
-        startQuiz();
-    });
-});
-
 
 // Функція завершення квіза
 function endQuiz() {
@@ -207,16 +179,16 @@ function endQuiz() {
 }
 
 // Функція зміни теми та стилю фону
-function applyTheme(theme) {
-    const themeColors = {
-        'Виберіть першу тему квіза': '#365486',
-        'Виберіть другу тему квіза': '#E74C3C',
-        'Виберіть третю тему квіза': '#8E44AD',
-        'Виберіть четверту тему квіза': '#8E44AD',
-    };
+// function applyTheme(theme) {
+//     const themeColors = {
+//         'Виберіть першу тему квіза': '#365486',
+//         'Виберіть другу тему квіза': '#E74C3C',
+//         'Виберіть третю тему квіза': '#8E44AD',
+//         'Виберіть четверту тему квіза': '#8E44AD',
+//     };
 
-    document.body.style.backgroundColor = themeColors[theme];
-    const header = document.querySelector('header');
-    header.textContent = theme + ' вибрано!';
-}
+//     document.body.style.backgroundColor = themeColors[theme];
+//     const header = document.querySelector('header');
+//     header.textContent = theme + ' вибрано!';
+// }
 
