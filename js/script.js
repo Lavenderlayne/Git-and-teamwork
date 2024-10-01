@@ -5,6 +5,7 @@ let answers = document.querySelector('.answers');
 let answer_buttons = document.querySelectorAll('.answer-button');
 let statisticsDisplay = document.querySelector('.statistics');
 let timerDisplay = document.querySelector('.timer');
+let difficulty_buttons = document.querySelector('.difficulty-buttons')
 
 // Масив питань для різних квізів
 const quiz1 = [
@@ -76,7 +77,8 @@ document.querySelectorAll('.theme-button').forEach(button => {
         }
 
         // Приховуємо екран вибору теми і показуємо екран питань
-        document.querySelector('.main-screen').style.display = 'none';
+        mainScreen.style.display = 'none';
+        difficulty_buttons.style.display = 'none';
         document.querySelector('.question-screen').style.display = 'block';
 
         startQuiz();
@@ -167,6 +169,34 @@ answer_buttons.forEach(button => {
         }
 
         setTimeout(displayNextQuestion, 1000);
+    });
+});
+
+document.querySelectorAll('.theme-button').forEach(button => {
+    button.addEventListener('click', () => {
+        const selectedTheme = button.textContent;
+        applyTheme(selectedTheme);
+
+        // Select quiz based on chosen theme
+        switch (selectedTheme) {
+            case 'Географія':
+                selectedQuiz = questions1.json;
+                break;
+            case 'Виберіть другу тему квіза':
+                selectedQuiz = quiz2;
+                break;
+            case 'Geography Quiz':  // Add this case for geography
+                selectedQuiz = geographyQuiz;
+                break;
+            default:
+                selectedQuiz = quiz1;
+        }
+
+        // Hide theme selection screen and show question screen
+        mainScreen.style.display = 'none';
+        document.querySelector('.question-screen').style.display = 'block';
+
+        startQuiz();
     });
 });
 

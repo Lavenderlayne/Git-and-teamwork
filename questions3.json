@@ -1,0 +1,108 @@
+[
+    {
+      "question": "Яка компанія створила гру 'The Witcher 3: Wild Hunt'?",
+      "answers": ["Bethesda", "CD Projekt Red", "Ubisoft", "Rockstar Games"],
+      "correct": "CD Projekt Red"
+    },
+    {
+      "question": "У якій грі головний герой керує мисливцем на роботизованих динозаврів?",
+      "answers": ["Far Cry Primal", "Monster Hunter: World", "Horizon Zero Dawn", "Ark: Survival Evolved"],
+      "correct": "Horizon Zero Dawn"
+    },
+    {
+      "question": "Яка з цих ігор є серією від компанії Blizzard Entertainment?",
+      "answers": ["Dark Souls", "World of Warcraft", "Battlefield", "The Last of Us"],
+      "correct": "World of Warcraft"
+    },
+    {
+      "question": "Яка гра вважається однією з перших 3D-платформерів?",
+      "answers": ["Super Mario 64", "Crash Bandicoot", "Banjo-Kazooie", "Spyro the Dragon"],
+      "correct": "Super Mario 64"
+    },
+    {
+      "question": "Який із цих шутерів є від першої особи?",
+      "answers": ["God of War", "Overwatch", "League of Legends", "Devil May Cry"],
+      "correct": "Overwatch"
+    },
+    {
+      "question": "Яка з цих ігор є частиною серії 'Souls'?",
+      "answers": ["Nioh", "Bloodborne", "Hollow Knight", "Sekiro: Shadows Die Twice"],
+      "correct": "Bloodborne"
+    },
+    {
+      "question": "У якій грі гравець досліджує постапокаліптичний світ, борючись з мутантами та рейдерами?",
+      "answers": ["Fallout 4", "Metro Exodus", "The Last of Us Part II", "Dying Light"],
+      "correct": "Fallout 4"
+    },
+    {
+      "question": "Яка гра популяризувала жанр MOBA?",
+      "answers": ["Heroes of the Storm", "League of Legends", "Dota 2", "Smite"],
+      "correct": "League of Legends"
+    },
+    {
+      "question": "Як називається головний персонаж серії ігор 'Half-Life'?",
+      "answers": ["Гейб Ньюелл", "Шепард", "Гордон Фрімен", "Лара Крофт"],
+      "correct": "Гордон Фрімен"
+    },
+    {
+      "question": "Який монстр є головним ворогом у серії ігор 'Resident Evil'?",
+      "answers": ["Немезіс", "Джокер", "Сіленхед", "Альберт Вескер"],
+      "correct": "Немезіс"
+    },
+    {
+      "question": "У якій грі гравець керує групою злочинців, що виконує пограбування?",
+      "answers": ["Mafia", "Watch Dogs", "GTA V", "Red Dead Redemption 2"],
+      "correct": "GTA V"
+    },
+    {
+      "question": "Як називається головний герой гри 'God of War'?",
+      "answers": ["Арес", "Аполлон", "Кратос", "Геракл"],
+      "correct": "Кратос"
+    },
+    {
+      "question": "У якій грі з'являється персонаж Артур Морган?",
+      "answers": ["Red Dead Redemption 2", "The Witcher 2", "Assassin’s Creed Valhalla", "Far Cry 5"],
+      "correct": "Red Dead Redemption 2"
+    },
+    {
+      "question": "Яка гра є симулятором будівництва міста?",
+      "answers": ["SimCity", "Civilization VI", "Age of Empires", "Tropico 6"],
+      "correct": "SimCity"
+    },
+    {
+      "question": "Яка гра розповідає про боротьбу повстанців проти диктатора на тропічному острові?",
+      "answers": ["Just Cause 3", "Far Cry 6", "Ghost Recon: Wildlands", "Tropico"],
+      "correct": "Far Cry 6"
+    },
+    {
+      "question": "Яка гра є головним конкурентом FIFA у жанрі футбольних симуляторів?",
+      "answers": ["NBA 2K", "Pro Evolution Soccer (PES)", "Madden NFL", "Rocket League"],
+      "correct": "Pro Evolution Soccer (PES)"
+    },
+    {
+      "question": "У якій грі потрібно керувати виживанням поселенців у дикій природі?",
+      "answers": ["Frostpunk", "RimWorld", "Don't Starve", "Banished"],
+      "correct": "RimWorld"
+    },
+    {
+      "question": "У якій грі вперше з'явився персонаж Лінк?",
+      "answers": ["Super Mario Bros.", "The Legend of Zelda", "Metroid", "Final Fantasy"],
+      "correct": "The Legend of Zelda"
+    },
+    {
+      "question": "Яка гра є частиною серії 'Dark Souls'?",
+      "answers": ["Elden Ring", "Sekiro: Shadows Die Twice", "Bloodborne", "Dark Souls III"],
+      "correct": "Dark Souls III"
+    },
+    {
+      "question": "Яка гра була створена як симулятор космічних пригод і колонізації?",
+      "answers": ["Star Citizen", "No Man's Sky", "Kerbal Space Program", "EVE Online"],
+      "correct": "No Man's Sky"
+    }
+  ]
+  
+  
+  
+  
+  
+  
