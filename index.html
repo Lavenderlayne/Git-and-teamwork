@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="uk">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuizBurst</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-    <h1>QuizBurst</h1>
-    
     <header>
-       QuizBurst
+        <h1>QuizBurst</h1>
     </header>
 
     <div class="main-screen">
-        <h1 class="theme-txt">Вибери тему квіза</h1>
+        <h2 class="theme-txt">Вибери тему квіза</h2>
         <div id="theme1" class="theme-button">Англійська</div>
         <div id="theme2" class="theme-button">Ігри</div>
         <div id="theme3" class="theme-button">Спорт</div>
         <div id="theme4" class="theme-button">Географія</div>
     </div>
 
-    <div class="difficulty-buttons">
+    <div class="difficulty-buttons hidden">
+        <h2>Виберіть складність</h2>
         <button class="difficulty-button" data-difficulty="easy">Легко</button>
         <button class="difficulty-button" data-difficulty="medium">Середньо</button>
         <button class="difficulty-button" data-difficulty="hard">Важко</button>
+        <button class="difficulty-button" data-difficulty="impossible">Неможливо</button>
     </div>
 
-    <div id="popup" class="popup">
+    <div id="popup" class="popup hidden">
         <div id="popup-text"></div>
         <button id="close-popup">Закрити</button>
     </div>
@@ -48,14 +46,17 @@
             <button class="answer-button">Відповідь 3</button>
             <button class="answer-button">Відповідь 4</button>
         </div>
+        <button id="skip-button">Пропустити</button>
+        <div class="timer">Залишилось: <span id="time-left">10</span> сек</div>
     </div>
 
-    <div class="timer">Залишилось: 10 сек</div>
-
     <div class="statistics hidden"></div>
+    <div class="leaderboard hidden"></div>
+
+    <div class="audio-controls">
+        <button id="mute-button">Mute</button>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
-
 </html>
-
