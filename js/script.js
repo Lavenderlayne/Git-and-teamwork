@@ -1,21 +1,25 @@
 let mainScreen = document.querySelector('.main-screen');
-let difficulty_buttons = document.querySelector('.difficulty-buttons');
+let difficulty_buttons = document.querySelectorAll('.difficulty-button');
+let difficulty_block = document.querySelector('.difficulty-buttons');
 let questionScreen = document.querySelector('.question-screen');
 let questionText = document.querySelector('.question');
 let answerButtons = document.querySelectorAll('.answer-button');
 let timerDisplay = document.querySelector('.timer');
 let statisticsDisplay = document.querySelector('.statistics');
-let leaderboardDisplay = document.querySelector('.leaderboard');
 let skipButton = document.getElementById('skip-button');
 let muteButton = document.getElementById('mute-button');
 
 let selectedQuiz = [];
+let selectedTheme; // тема квіза
 let currentDifficulty;
 let countdownInterval;
 let currentQuestionIndex = 0;
 let correctAnswersCount = 0;
 let totalAnswersCount = 0;
-let isMuted = false; // Mute state
+let isMuted = false; // Стан звуку (вимкнено чи ні)
+let questions_eng, questions_sport, questions_game, questions_geo;
+let questions_eng2, questions_sport2, questions_game2, questions_geo2;
+let questions_eng3, questions_sport3, questions_game3, questions_geo3;
 
 const difficultyLevels = {
     easy: 15,
@@ -30,101 +34,127 @@ const audio = {
     background: new Audio('background.mp3')
 };
 
-audio.background.loop = true; // Loop background music
+audio.background.loop = true; // Фонова музика повторюється
 
-// Function to fetch questions from JSON files
-async function getQuestions(file_name) {
-    try {
-        let response = await fetch(file_name);
-        if (!response.ok) throw new Error('Network response was not ok');
-        let questions = await response.json();
-        return questions["questions"];
-    } catch (error) {
-        console.error('Error fetching questions:', error);
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]
     }
 }
 
-// Load questions from JSON files
+async function getQuestions(file_name) {
+    try {
+        let response = await fetch(file_name);
+        if (!response.ok) throw new Error('Мережевий запит завершився невдало');
+        let questions = await response.json();
+        return questions["questions"];
+    } catch (error) {
+        console.error('Помилка при отриманні запитань:', error);
+    }
+}
+
 Promise.all([
-    getQuestions("questions1.json").then(questions => { questions_eng = questions; }),
-    getQuestions("questions2.json").then(questions => { questions_sport = questions; }),
-    getQuestions("questions3.json").then(questions => { questions_game = questions; }),
-    getQuestions("questions4.json").then(questions => { questions_geo = questions; })
+    getQuestions("eng/questionseng1.json").then(questions => { questions_eng = questions; }),
+    getQuestions("sport/questionssport1.json").then(questions => { questions_sport = questions; }),
+    getQuestions("games/questionsgame1.json").then(questions => { questions_game = questions; }),
+    getQuestions("geo/questionsgeo1.json").then(questions => { questions_geo = questions; }),
+
+    getQuestions("eng/questionseng2.json").then(questions => { questions_eng2 = questions; }),
+    getQuestions("sport/questionssport2.json").then(questions => { questions_sport2 = questions; }),
+    getQuestions("games/questionsgame2.json").then(questions => { questions_game2 = questions; }),
+    getQuestions("geo/questionsgeo2.json").then(questions => { questions_geo2 = questions; }),
+
+    getQuestions("eng/questionseng3.json").then(questions => { questions_eng3 = questions; }),
+    getQuestions("sport/questionssport3.json").then(questions => { questions_sport3 = questions; }),
+    getQuestions("games/questionsgame3.json").then(questions => { questions_game3 = questions; }),
+    getQuestions("geo/questionsgeo3.json").then(questions => { questions_geo3 = questions; }),
 ]).then(() => {
-    console.log('All questions loaded');
+    console.log('Усі запитання завантажено');
 });
 
-// Theme selection event listener
 document.querySelectorAll('.theme-button').forEach(button => {
     button.addEventListener('click', () => {
-        const selectedTheme = button.textContent.trim();
-        switch (selectedTheme) {
-            case 'Англійська':
-                selectedQuiz = questions_eng;
-                break;
-            case 'Спорт':
-                selectedQuiz = questions_sport;
-                break;
-            case 'Ігри':
-                selectedQuiz = questions_game;
-                break;
-            case 'Географія':
-                selectedQuiz = questions_geo;
-                break;
-            default:
-                selectedQuiz = [];
-                break;
-        }
+        selectedTheme = button.textContent.trim();
+
+        shuffle(selectedQuiz);
         mainScreen.style.display = 'none';
-        difficulty_buttons.style.display = 'block';
+        difficulty_block.style.display = 'block';
     });
 });
 
-// Difficulty selection event listener
-difficulty_buttons.addEventListener('click', function (event) {
-    const selectedDifficulty = event.target.dataset.difficulty;
-    currentDifficulty = difficultyLevels[selectedDifficulty];
+difficulty_buttons.forEach(button => {
+    button.addEventListener('click', function (event) {
+        const selectedDifficulty = event.target.getAttribute('data-difficulty');
+        if (selectedDifficulty === "easy" && selectedTheme == 'Англійська') {
+            selectedQuiz = questions_eng;
+        } else if (selectedDifficulty === "medium" && selectedTheme == 'Англійська') {
+            selectedQuiz = questions_eng2;
+        } else if (selectedDifficulty === "hard" && selectedTheme == 'Англійська') {
+            selectedQuiz = questions_eng3;
+        } else if (selectedDifficulty === "easy" && selectedTheme == 'Географія') {
+            selectedQuiz = questions_geo;
+        } else if (selectedDifficulty === "medium" && selectedTheme == 'Географія') {
+            selectedQuiz = questions_geo2;
+        } else if (selectedDifficulty === "hard" && selectedTheme == 'Географія') {
+            selectedQuiz = questions_geo3;
+        } else if (selectedDifficulty === "easy" && selectedTheme == 'Ігри') {
+            selectedQuiz = questions_game;
+        } else if (selectedDifficulty === "medium" && selectedTheme == 'Ігри') {
+            selectedQuiz = questions_game2;
+        } else if (selectedDifficulty === "hard" && selectedTheme == 'Ігри') {
+            selectedQuiz = questions_game3;
+        } else if (selectedDifficulty === "easy" && selectedTheme == 'Спорт') {
+            selectedQuiz = questions_sport;
+        } else if (selectedDifficulty === "medium" && selectedTheme == 'Спорт') {
+            selectedQuiz = questions_sport2;
+        } else if (selectedDifficulty === "hard" && selectedTheme == 'Спорт') {
+            selectedQuiz = questions_sport3;
+        } else {
+            selectedQuiz = questions_game;
+        }
 
-    localStorage.setItem('selectedDifficulty', selectedDifficulty);
+        currentDifficulty = difficultyLevels[selectedDifficulty];
 
-    difficulty_buttons.style.display = 'none';
-    questionScreen.style.display = 'block';
-    startQuiz();
+        localStorage.setItem('selectedDifficulty', selectedDifficulty);
+
+        difficulty_block.style.display = 'none';
+        questionScreen.style.display = 'block';
+        startQuiz();
+    });
 });
 
-// Start quiz function
 function startQuiz() {
     currentQuestionIndex = 0;
     correctAnswersCount = 0;
     totalAnswersCount = 0;
-    audio.background.play(); // Play background music
+    audio.background.play();
     displayNextQuestion();
-    startCountdown();
 }
 
-// Display the next question
 function displayNextQuestion() {
+    clearInterval(countdownInterval);
+
     if (currentQuestionIndex < selectedQuiz.length) {
         const currentQuestion = selectedQuiz[currentQuestionIndex];
         questionText.textContent = `${currentQuestionIndex + 1}/${selectedQuiz.length}: ${currentQuestion.question}`;
         answerButtons.forEach((button, index) => {
             button.textContent = currentQuestion.answers[index];
-            button.style.background = ''; // Reset background for new answers
-            button.classList.remove('fade-in', 'fade-out'); // Reset animation classes
+            button.style.background = '';
+            button.classList.remove('fade-in', 'fade-out');
         });
         currentQuestionIndex++;
-        animateQuestionDisplay(); // Animate question display
+        animateQuestionDisplay();
+        startCountdown();
     } else {
         endQuiz();
     }
 }
 
-// Countdown timer for each question
 function startCountdown() {
     let countdownTime = currentDifficulty;
     timerDisplay.innerHTML = `Залишилось: ${countdownTime} сек`;
 
-    clearInterval(countdownInterval);
     countdownInterval = setInterval(() => {
         countdownTime--;
         timerDisplay.innerHTML = `Залишилось: ${countdownTime} сек`;
@@ -132,75 +162,64 @@ function startCountdown() {
         if (countdownTime <= 0) {
             clearInterval(countdownInterval);
             totalAnswersCount++;
-            displayNextQuestion();
-            startCountdown(); // Start timer for the next question
+
+            answerButtons.forEach(button => {
+                if (button.innerHTML.trim() === selectedQuiz[currentQuestionIndex - 1].correct.trim()) {
+                    button.style.background = '#13fa0f';
+                }
+            });
+
+            setTimeout(() => {
+                displayNextQuestion();
+            }, 1000);
         }
     }, 1000);
 }
 
-// Handle answer button clicks
+function animateQuestionDisplay() {
+    questionText.classList.add('fade-in');
+    setTimeout(() => {
+        questionText.classList.remove('fade-in');
+    }, 500);
+}
+
+function endQuiz() {
+    questionScreen.style.display = 'none';
+    statisticsDisplay.style.display = 'block';
+    let result = Math.round((correctAnswersCount / selectedQuiz.length) * 100);
+    statisticsDisplay.innerHTML = `<h2>Вікторина завершена!</h2><p>Ваш результат: ${result}% правильних відповідей.</p>`;
+}
+
+muteButton.addEventListener('click', () => {
+    isMuted = !isMuted;
+    if (isMuted) {
+        audio.background.pause();
+    } else {
+        audio.background.play();
+    }
+});
+
 answerButtons.forEach(button => {
     button.addEventListener('click', function () {
         const currentQuestion = selectedQuiz[currentQuestionIndex - 1];
-        totalAnswersCount++;
-
-        if (button.innerHTML === currentQuestion.correct) {
+        if (button.innerHTML.trim() === currentQuestion.correct.trim()) {
             correctAnswersCount++;
-            button.style.background = '#13fa0f'; // Green for correct answer
-            if (!isMuted) audio.correct.play(); // Play sound if not muted
+            button.style.background = '#13fa0f';
+            if (!isMuted) audio.correct.play();
         } else {
-            button.style.background = '#e74c3c'; // Red for incorrect answer
-            if (!isMuted) audio.incorrect.play(); // Play sound if not muted
+            button.style.background = '#ff4d4d';
+            if (!isMuted) audio.incorrect.play();
         }
 
-        // Delay before showing the next question
+        totalAnswersCount++;
+
         setTimeout(() => {
             displayNextQuestion();
-            startCountdown(); // Update timer for the next question
         }, 1000);
     });
 });
 
-// Handle skip button click
-skipButton.addEventListener('click', function () {
+skipButton.addEventListener('click', () => {
     totalAnswersCount++;
-    displayNextQuestion(); // Move to the next question immediately
+    displayNextQuestion();
 });
-
-// Mute button functionality
-muteButton.addEventListener('click', () => {
-    isMuted = !isMuted;
-    muteButton.textContent = isMuted ? 'Unmute' : 'Mute'; // Toggle button text
-    if (isMuted) {
-        audio.background.pause(); // Stop background music if muted
-    } else {
-        audio.background.play(); // Play background music if unmuted
-    }
-});
-
-// End quiz function
-function endQuiz() {
-    clearInterval(countdownInterval);
-    audio.background.pause(); // Stop background music
-
-    questionScreen.style.display = 'none';
-    statisticsDisplay.style.display = 'block';
-    displayStatistics();
-}
-
-// Display quiz statistics
-function displayStatistics() {
-    let percentageCorrect = (correctAnswersCount / totalAnswersCount) * 100;
-    statisticsDisplay.innerHTML = `
-        <h2>Ваші результати</h2>
-        <p>Кількість правильних відповідей: ${correctAnswersCount}</p>
-        <p>Відповідей всього: ${totalAnswersCount}</p>
-        <p>Точність: ${percentageCorrect.toFixed(2)}%</p>
-    `;
-}
-
-// Animate the question and answer buttons
-function animateQuestionDisplay() {
-    questionText.classList.add('fade-in');
-    answerButtons.forEach(button => button.classList.add('fade-in'));
-}
