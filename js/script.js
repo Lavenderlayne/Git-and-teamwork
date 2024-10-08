@@ -182,32 +182,25 @@ muteButton.addEventListener('click', () => {
 function endQuiz() {
     clearInterval(countdownInterval);
     audio.background.pause(); // Stop background music
-    questionText.textContent = 'Квіз завершено!';
-    answerButtons.forEach(button => button.style.display = 'none'); // Hide answer buttons
-    timerDisplay.innerHTML = ''; // Hide timer
-    statisticsDisplay.textContent = `Ви відповіли правильно на ${correctAnswersCount} з ${totalAnswersCount} питань!`;
-    statisticsDisplay.style.display = 'block'; // Show statistics
 
-    // Update and display leaderboard
-    updateLeaderboard(correctAnswersCount);
+    questionScreen.style.display = 'none';
+    statisticsDisplay.style.display = 'block';
+    displayStatistics();
 }
 
-// Update and display leaderboard
-function updateLeaderboard(score) {
-    let leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
-    leaderboard.push(score);
-    leaderboard.sort((a, b) => b - a); // Sort in descending order
-    localStorage.setItem('leaderboard', JSON.stringify(leaderboard));
-
-    // Display leaderboard
-    leaderboardDisplay.innerHTML = `<h2>Лідерборд:</h2><ol>${leaderboard.map(score => `<li>${score}</li>`).join('')}</ol>`;
-    leaderboardDisplay.style.display = 'block'; // Show leaderboard
+// Display quiz statistics
+function displayStatistics() {
+    let percentageCorrect = (correctAnswersCount / totalAnswersCount) * 100;
+    statisticsDisplay.innerHTML = `
+        <h2>Ваші результати</h2>
+        <p>Кількість правильних відповідей: ${correctAnswersCount}</p>
+        <p>Відповідей всього: ${totalAnswersCount}</p>
+        <p>Точність: ${percentageCorrect.toFixed(2)}%</p>
+    `;
 }
 
-// Animate question display
+// Animate the question and answer buttons
 function animateQuestionDisplay() {
-    questionText.classList.add('fade-in'); // Add fade-in class for animation
-    setTimeout(() => {
-        questionText.classList.remove('fade-in'); // Remove after animation
-    }, 500); // Match this duration to your CSS animation duration
+    questionText.classList.add('fade-in');
+    answerButtons.forEach(button => button.classList.add('fade-in'));
 }

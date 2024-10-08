@@ -1,0 +1,134 @@
+{
+    "questions": [
+      {
+        "question": "Яка компанія створила гру 'The Witcher 3: Wild Hunt'?",
+        "answers": [
+          "Bethesda",
+          "CD Projekt Red",
+          "Ubisoft",
+          "Rockstar Games"
+        ],
+        "correct": "CD Projekt Red"
+      },
+      {
+        "question": "Яка гра вважається першою відеогрою в історії?",
+        "answers": [
+          "Pong",
+          "Tennis for Two",
+          "Space Invaders",
+          "Pac-Man"
+        ],
+        "correct": "Tennis for Two"
+      },
+      {
+        "question": "Яка серія ігор є найбільш продаваною в історії?",
+        "answers": [
+          "Call of Duty",
+          "Grand Theft Auto",
+          "Mario",
+          "Zelda"
+        ],
+        "correct": "Mario"
+      },
+      {
+        "question": "Яка гра отримала найбільше нагород на The Game Awards 2020?",
+        "answers": [
+          "Ghost of Tsushima",
+          "The Last of Us Part II",
+          "Animal Crossing: New Horizons",
+          "Hades"
+        ],
+        "correct": "The Last of Us Part II"
+      },
+      {
+        "question": "Яка компанія розробила гру Fortnite?",
+        "answers": [
+          "Epic Games",
+          "Valve",
+          "Activision",
+          "Blizzard"
+        ],
+        "correct": "Epic Games"
+      },
+      {
+        "question": "Яка гра має найбільшу кількість активних гравців у світі?",
+        "answers": [
+          "League of Legends",
+          "Minecraft",
+          "World of Warcraft",
+          "Counter-Strike: Global Offensive"
+        ],
+        "correct": "Minecraft"
+      },
+      {
+        "question": "Яка гра з відкритим світом дозволяє грати за злодія, поліцейського та багато інших персонажів?",
+        "answers": [
+          "GTA V",
+          "Red Dead Redemption 2",
+          "Watch Dogs",
+          "Saints Row"
+        ],
+        "correct": "GTA V"
+      },
+      {
+        "question": "Яка популярна рольова гра була випущена компанією CD Projekt Red у 2015 році?",
+        "answers": [
+          "Dragon Age: Inquisition",
+          "The Witcher 3: Wild Hunt",
+          "Skyrim",
+          "Divinity: Original Sin 2"
+        ],
+        "correct": "The Witcher 3: Wild Hunt"
+      },
+      {
+        "question": "Яка гра стала класикою жанру хоррор та була випущена в 1996 році?",
+        "answers": [
+          "Silent Hill",
+          "Resident Evil",
+          "Fatal Frame",
+          "Outlast"
+        ],
+        "correct": "Resident Evil"
+      },
+      {
+        "question": "Яка гра про виживання стала популярною завдяки своїй кросплатформеній грі та будівництву?",
+        "answers": [
+          "Terraria",
+          "Ark: Survival Evolved",
+          "Minecraft",
+          "Rust"
+        ],
+        "correct": "Minecraft"
+      },
+      {
+        "question": "Яка гра є частиною серії Call of Duty та відбувається під час Другої світової війни?",
+        "answers": [
+          "Call of Duty: Modern Warfare",
+          "Call of Duty: WWII",
+          "Call of Duty: Black Ops",
+          "Call of Duty: Ghosts"
+        ],
+        "correct": "Call of Duty: WWII"
+      },
+      {
+        "question": "Яка гра отримала нагороду 'Гра року' на The Game Awards 2019?",
+        "answers": [
+          "Death Stranding",
+          "Sekiro: Shadows Die Twice",
+          "Control",
+          "Resident Evil 2"
+        ],
+        "correct": "Sekiro: Shadows Die Twice"
+      },
+      {
+        "question": "Яка гра з відкритим світом дозволяє гравцеві стати піратом у Карибському морі?",
+        "answers": [
+          "Assassin's Creed IV: Black Flag",
+          "Sea of Thieves",
+          "Skull and Bones",
+          "Wind Waker"
+        ],
+        "correct": "Sea of Thieves"
+      }
+    ]
+  }

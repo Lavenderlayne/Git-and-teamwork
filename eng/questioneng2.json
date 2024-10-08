@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "question": "Translate \"взаємодія\" into English.",
+      "answers": [
+        "Interaction",
+        "Cooperation",
+        "Connection",
+        "Collaboration"
+      ],
+      "correct": "Interaction"
+    },
+    {
+      "question": "Translate \"досягнення\" into English.",
+      "answers": [
+        "Success",
+        "Achievement",
+        "Accomplishment",
+        "Goal"
+      ],
+      "correct": "Achievement"
+    },
+    {
+      "question": "Translate \"внесок\" into English.",
+      "answers": [
+        "Donation",
+        "Contribution",
+        "Investment",
+        "Support"
+      ],
+      "correct": "Contribution"
+    },
+    {
+      "question": "Translate \"припущення\" into English.",
+      "answers": [
+        "Theory",
+        "Assumption",
+        "Hypothesis",
+        "Prediction"
+      ],
+      "correct": "Assumption"
+    },
+    {
+      "question": "Translate \"співпраця\" into English.",
+      "answers": [
+        "Interaction",
+        "Cooperation",
+        "Support",
+        "Collaboration"
+      ],
+      "correct": "Collaboration"
+    },
+    {
+      "question": "Translate \"зневажати\" into English.",
+      "answers": [
+        "Disregard",
+        "Neglect",
+        "Ignore",
+        "Reject"
+      ],
+      "correct": "Neglect"
+    },
+    {
+      "question": "Translate \"гнучкість\" into English.",
+      "answers": [
+        "Strength",
+        "Flexibility",
+        "Agility",
+        "Adaptability"
+      ],
+      "correct": "Flexibility"
+    },
+    {
+      "question": "Translate \"переконувати\" into English.",
+      "answers": [
+        "Encourage",
+        "Convince",
+        "Persuade",
+        "Influence"
+      ],
+      "correct": "Persuade"
+    },
+    {
+      "question": "Translate \"зручний\" into English.",
+      "answers": [
+        "Suitable",
+        "Comfortable",
+        "Convenient",
+        "Accessible"
+      ],
+      "correct": "Convenient"
+    },
+    {
+      "question": "Translate \"вагатися\" into English.",
+      "answers": [
+        "Doubt",
+        "Hesitate",
+        "Postpone",
+        "Delay"
+      ],
+      "correct": "Hesitate"
+    },
+    {
+      "question": "Translate \"всебічний\" into English.",
+      "answers": [
+        "Thorough",
+        "Complete",
+        "Comprehensive",
+        "Detailed"
+      ],
+      "correct": "Comprehensive"
+    },
+    {
+      "question": "Translate \"надійний\" into English.",
+      "answers": [
+        "Secure",
+        "Reliable",
+        "Trustworthy",
+        "Dependable"
+      ],
+      "correct": "Reliable"
+    }
+  ]
+}

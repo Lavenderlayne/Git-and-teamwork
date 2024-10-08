@@ -1,0 +1,124 @@
+{
+    "questions": [
+      {
+        "question": "Translate \"невід'ємний\" into English.",
+        "answers": [
+          "Integral",
+          "Important",
+          "Essential",
+          "Inseparable"
+        ],
+        "correct": "Integral"
+      },
+      {
+        "question": "Translate \"суперечливий\" into English.",
+        "answers": [
+          "Debatable",
+          "Controversial",
+          "Argumentative",
+          "Contradictory"
+        ],
+        "correct": "Controversial"
+      },
+      {
+        "question": "Translate \"перебільшення\" into English.",
+        "answers": [
+          "Overstatement",
+          "Exaggeration",
+          "Amplification",
+          "Hyperbole"
+        ],
+        "correct": "Exaggeration"
+      },
+      {
+        "question": "Translate \"неоднозначний\" into English.",
+        "answers": [
+          "Ambiguous",
+          "Obscure",
+          "Vague",
+          "Unclear"
+        ],
+        "correct": "Ambiguous"
+      },
+      {
+        "question": "Translate \"спотворений\" into English.",
+        "answers": [
+          "Twisted",
+          "Misrepresented",
+          "Distorted",
+          "Deformed"
+        ],
+        "correct": "Distorted"
+      },
+      {
+        "question": "Translate \"передбачуваний\" into English.",
+        "answers": [
+          "Predictable",
+          "Foreseeable",
+          "Expected",
+          "Anticipated"
+        ],
+        "correct": "Predictable"
+      },
+      {
+        "question": "Translate \"незмінний\" into English.",
+        "answers": [
+          "Unchanging",
+          "Consistent",
+          "Immutable",
+          "Fixed"
+        ],
+        "correct": "Immutable"
+      },
+      {
+        "question": "Translate \"непримиренний\" into English.",
+        "answers": [
+          "Irreconcilable",
+          "Uncompromising",
+          "Inflexible",
+          "Unyielding"
+        ],
+        "correct": "Irreconcilable"
+      },
+      {
+        "question": "Translate \"недоречний\" into English.",
+        "answers": [
+          "Inappropriate",
+          "Irrelevant",
+          "Unfitting",
+          "Misplaced"
+        ],
+        "correct": "Irrelevant"
+      },
+      {
+        "question": "Translate \"привілейований\" into English.",
+        "answers": [
+          "Privileged",
+          "Entitled",
+          "Fortunate",
+          "Preferred"
+        ],
+        "correct": "Privileged"
+      },
+      {
+        "question": "Translate \"цілісний\" into English.",
+        "answers": [
+          "Holistic",
+          "Unified",
+          "Comprehensive",
+          "Complete"
+        ],
+        "correct": "Holistic"
+      },
+      {
+        "question": "Translate \"незбагненний\" into English.",
+        "answers": [
+          "Incomprehensible",
+          "Unfathomable",
+          "Mysterious",
+          "Perplexing"
+        ],
+        "correct": "Unfathomable"
+      }
+    ]
+  }
