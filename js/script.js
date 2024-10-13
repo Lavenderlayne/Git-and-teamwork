@@ -6,6 +6,8 @@ let questionText = document.querySelector('.question');
 let answerButtons = document.querySelectorAll('.answer-button');
 let timerDisplay = document.querySelector('.timer');
 let statisticsDisplay = document.querySelector('.statistics');
+let restartButton = document.querySelector('.restart-button');
+let homeButton = document.querySelector('.home-button');
 let skipButton = document.getElementById('skip-button');
 let muteButton = document.getElementById('mute-button');
 
@@ -35,6 +37,9 @@ const audio = {
 };
 
 audio.background.loop = true; // Фонова музика повторюється
+// audio.background.play()
+// audio.background.volume = 0
+
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -183,11 +188,16 @@ function animateQuestionDisplay() {
     }, 500);
 }
 
+
+
 function endQuiz() {
     questionScreen.style.display = 'none';
     statisticsDisplay.style.display = 'block';
+    restartButton.style.display = "block";
+    homeButton.style.display = "block";
     let result = Math.round((correctAnswersCount / selectedQuiz.length) * 100);
     statisticsDisplay.innerHTML = `<h2>Вікторина завершена!</h2><p>Ваш результат: ${result}% правильних відповідей.</p>`;
+    
 }
 
 muteButton.addEventListener('click', () => {

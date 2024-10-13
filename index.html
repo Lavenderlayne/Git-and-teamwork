@@ -37,7 +37,11 @@
 
     <div class="question-screen hidden">
         <div class="progress-bar">
-            <div class="progress"></div>
+            <div class="progress">
+                <!-- <div class="segment red"> </div>
+                <div class="segment green"> </div>
+                <div class="segment grey"> </div> -->
+            </div>
         </div>
         <div class="question">Тут буде питання</div>
         <div class="answers">
@@ -50,9 +54,16 @@
         <div class="timer">Залишилось: <span id="time-left">10</span> сек</div>
     </div>
 
-    <div class="statistics hidden"></div>
-    <div class="leaderboard hidden"></div>
+    <div class="statistics hidden">Статистика</div>
+    <div class="leaderboard hidden">Таблиця результатів</div>
 
+    <button class="button restart-button hidden">Рестарт</button>
+    <button class="button home-button hidden">Повернутися на початок</button>
+
+        <audio id="background-audio" loop>
+            <source src="audio/background.mp3" type="audio/mpeg">
+        </audio>
+    </div>
     <div class="audio-controls">
         <button id="mute-button">Mute</button>
     </div>

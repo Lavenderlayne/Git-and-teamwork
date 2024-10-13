@@ -31,7 +31,7 @@ header {
 }
 
 /* Theme Button Styles */
-.theme-button {
+.theme-button, .button {
     border: 3px solid #0F1035;
     background-color: #7FC7D9;
     font-size: 15px;
@@ -47,7 +47,7 @@ header {
     /* Subtle shadow */
 }
 
-.theme-button:hover {
+.theme-button:hover, .button:hover {
     background-color: #5ba7b4;
     /* Darken the button on hover */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -331,7 +331,7 @@ body {
 .theme-button:hover,
 .difficulty-button:hover,
 .answer-button:hover,
-#skip-button:hover {
+#skip-button:hover , .button:hover{
     background-color: #21a1f1;
     /* Darker shade on hover */
 }
@@ -446,3 +446,4 @@ body {
     background-color: #28a745;
     transition: width 0.5s ease;
 }
+
