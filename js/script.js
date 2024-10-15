@@ -208,6 +208,13 @@ muteButton.addEventListener('click', () => {
         audio.background.play();
     }
 });
+homeButton.addEventListener('click',()=>{
+    mainScreen.style.display = 'block'
+    statisticsDisplay.style.display = 'none'
+    homeButton.style.display = 'none'
+    restartButton.style.display = 'none'
+});
+
 
 answerButtons.forEach(button => {
     button.addEventListener('click', function () {
