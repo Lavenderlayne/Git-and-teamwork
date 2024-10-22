@@ -133,6 +133,7 @@ function startQuiz() {
     currentQuestionIndex = 0;
     correctAnswersCount = 0;
     totalAnswersCount = 0;
+    progressBar.innerHTML = '';
     // audio.background.play();
     displayNextQuestion();
 }
@@ -208,18 +209,52 @@ muteButton.addEventListener('click', () => {
         audio.background.play();
     }
 });
-homeButton.addEventListener('click',()=>{
+homeButton.addEventListener('click', () => {
     mainScreen.style.display = 'block'
     statisticsDisplay.style.display = 'none'
     homeButton.style.display = 'none'
     restartButton.style.display = 'none'
 });
 
+restartButton.addEventListener('click', () => {
+    statisticsDisplay.style.display = 'none'
+    homeButton.style.display = 'none'
+    restartButton.style.display = 'none'
+    questionScreen.style.display = 'block';
+    progressBar.innerHTML = '';
+    startQuiz();
+});
 
-answerButtons.forEach(button => {
-    button.addEventListener('click', function () {
-        const currentQuestion = selectedQuiz[currentQuestionIndex - 1];
-        if (button.innerHTML.trim() === currentQuestion.correct.trim()) {
+
+let progressBar = document.querySelector('.progress-bar');
+
+function updateProgress(isCorrect) {
+    let segment = document.createElement('div');
+    segment.classList.add('progress-segment');
+    segment.style.width = `${100 / selectedQuiz.length}%`;
+
+    if (isCorrect) {
+        segment.classList.add('correct');
+    } else {
+        segment.classList.add('incorrect');
+    }
+
+
+    progressBar.appendChild(segment);
+}
+
+
+// Existing code for answer buttons
+answerButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        let selectedAnswer = button.innerHTML.trim();
+        let correctAnswer = selectedQuiz[currentQuestionIndex - 1].correct.trim();
+        
+        console.log(selectedAnswer);
+        console.log(correctAnswer);
+        
+        if (selectedAnswer == correctAnswer) {
+            button.style.background = '#4CAF50';
             correctAnswersCount++;
             updateProgress(true);
             console.log("Правильно");
