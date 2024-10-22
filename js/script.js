@@ -133,7 +133,7 @@ function startQuiz() {
     currentQuestionIndex = 0;
     correctAnswersCount = 0;
     totalAnswersCount = 0;
-    audio.background.play();
+    // audio.background.play();
     displayNextQuestion();
 }
 
@@ -197,7 +197,7 @@ function endQuiz() {
     homeButton.style.display = "block";
     let result = Math.round((correctAnswersCount / selectedQuiz.length) * 100);
     statisticsDisplay.innerHTML = `<h2>Вікторина завершена!</h2><p>Ваш результат: ${result}% правильних відповідей.</p>`;
-    
+
 }
 
 muteButton.addEventListener('click', () => {
@@ -208,21 +208,64 @@ muteButton.addEventListener('click', () => {
         audio.background.play();
     }
 });
+homeButton.addEventListener('click', () => {
+    mainScreen.style.display = 'block'
+    statisticsDisplay.style.display = 'none'
+    homeButton.style.display = 'none'
+    restartButton.style.display = 'none'
+});
 
-answerButtons.forEach(button => {
-    button.addEventListener('click', function () {
-        const currentQuestion = selectedQuiz[currentQuestionIndex - 1];
-        if (button.innerHTML.trim() === currentQuestion.correct.trim()) {
+restartButton.addEventListener('click', () => {
+    statisticsDisplay.style.display = 'none'
+    homeButton.style.display = 'none'
+    restartButton.style.display = 'none'
+    questionScreen.style.display = 'block';
+    startQuiz();
+});
+
+
+let progressBar = document.querySelector('.progress-bar');
+
+function updateProgress(isCorrect) {
+    let segment = document.createElement('div');
+    segment.classList.add('progress-segment');
+    segment.style.width = `${100 / selectedQuiz.length}%`;
+
+    if (isCorrect) {
+        segment.classList.add('correct');
+    } else {
+        segment.classList.add('incorrect');
+    }
+
+
+    progressBar.appendChild(segment);
+}
+
+
+// Existing code for answer buttons
+answerButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        let selectedAnswer = button.innerHTML.trim();
+        let correctAnswer = selectedQuiz[currentQuestionIndex - 1].correct.trim();
+        
+        console.log(selectedAnswer);
+        console.log(correctAnswer);
+        
+        if (selectedAnswer == correctAnswer) {
+            button.style.background = '#4CAF50';
             correctAnswersCount++;
-            button.style.background = '#13fa0f';
-            if (!isMuted) audio.correct.play();
+            updateProgress(true);
+            console.log("Правильно");
+            // if (!isMuted && audio.correct) audio.correct.play();
         } else {
             button.style.background = '#ff4d4d';
-            if (!isMuted) audio.incorrect.play();
+            updateProgress(false);
+            console.log("Неправильно");
+            // if (!isMuted && audio.incorrect) audio.incorrect.play();
         }
 
         totalAnswersCount++;
-
+        
         setTimeout(() => {
             displayNextQuestion();
         }, 1000);

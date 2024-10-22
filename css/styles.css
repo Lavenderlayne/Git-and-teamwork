@@ -447,3 +447,42 @@ body {
     transition: width 0.5s ease;
 }
 
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.progress-segment {
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.progress-segment.correct {
+    background-color: #4CAF50; 
+}
+
+.progress-segment.incorrect {
+    background-color: #F44336; 
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress {
+    height: 100%;
+    width: 0; /* Початкова ширина 0% */
+    background-color: #7FC7D9;
+    transition: width 0.5s ease;
+}
+
