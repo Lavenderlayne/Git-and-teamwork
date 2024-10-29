@@ -1,3 +1,4 @@
+/* Main Body Styles */
 body {
     background-color: #DCF2F1;
     font-family: "Pacifico", monospace;
@@ -8,78 +9,78 @@ body {
     justify-content: center;
     min-height: 100vh;
     margin: 0;
+    transition: background-color 0.5s ease;
 }
 
-h1 {
-    font-size: 50px;
-}
-
-.header {
+/* Header Styles */
+header {
     color: #fff;
-
+    width: 100%;
     background-color: #0F1035;
+    font-family: "Pacifico", monospace;
     font-size: 20px;
     text-align: center;
     padding: 20px;
-    opacity: 0;
-    transform: translateY(-50px);
-    transition: opacity 0.5s ease-in, transform 0.5s ease-in;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 600px;
-
-    display: none;
-
+    transition: background-color 0.5s ease;
 }
 
 .header.visible {
     opacity: 1;
     transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-
-.main-screen {
-    text-align: center;
-    margin: 20px 0;
-
-}
-
-.theme-button {
+/* Theme Button Styles */
+.theme-button, .button {
     border: 3px solid #0F1035;
     background-color: #7FC7D9;
     font-size: 15px;
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s ease;
     display: inline-block;
+    outline: none;
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* Subtle shadow */
 }
 
-.theme-button:hover {
-    background-color: #7FC7D9;
-    box-shadow: 0 0 150px 0.5px #000;
-
-    transform: rotate(4deg);
+.theme-button:hover, .button:hover {
+    background-color: #5ba7b4;
+    /* Darken the button on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    /* Slightly enlarge */
 }
 
 .theme-button:active {
     transform: scale(0.95);
-
-    box-shadow: 0 0 100px 0.5px #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+.theme-button:focus {
+    border-color: #FFD700;
+    outline: none;
+}
+
+/* Question Screen Styles */
 .question-screen {
     display: none;
     text-align: center;
     margin-bottom: 20px;
+    transition: all 0.5s ease;
 }
 
+/* Question Styles */
 .question {
     font-size: 18px;
     color: #0F1035;
     margin-bottom: 15px;
 }
 
+/* Answer Button Styles */
 .answer-button {
     display: block;
     margin: 10px 0;
@@ -90,12 +91,19 @@ h1 {
     color: #333;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .answer-button:hover {
     background-color: #7FC7D9;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    /* Lift effect */
+}
+
+.answer-button:focus {
+    outline: none;
+    border: 2px solid #FFD700;
 }
 
 .answer-button.correct {
@@ -108,6 +116,7 @@ h1 {
     color: white;
 }
 
+/* Timer Styles */
 .timer {
     font-size: 16px;
     color: #fff;
@@ -116,8 +125,10 @@ h1 {
     padding: 10px;
     border-radius: 10px;
     width: fit-content;
+    transition: background-color 0.5s ease;
 }
 
+/* Statistics Styles */
 .statistics {
     font-size: 14px;
     color: #0F1035;
@@ -128,8 +139,10 @@ h1 {
     width: fit-content;
     text-align: center;
     display: none;
+    transition: all 0.5s ease;
 }
 
+/* Popup Styles */
 .popup {
     display: none;
     position: fixed;
@@ -141,6 +154,7 @@ h1 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 #close-popup {
@@ -150,12 +164,14 @@ h1 {
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #close-popup:hover {
     background-color: #C0392B;
 }
 
+/* Hidden/Visible Class */
 .hidden {
     display: none;
 }
@@ -164,6 +180,7 @@ h1 {
     display: block;
 }
 
+/* Difficulty Buttons Styles */
 .difficulty-buttons {
     margin: 20px 0;
 }
@@ -172,9 +189,9 @@ h1 {
     background-color: #7FC7D9;
     padding: 10px;
     border: none;
-    color: white;
     cursor: pointer;
     border-radius: 5px;
+    border: 3px solid black;
     font-size: 14px;
     margin-right: 10px;
     transition: background-color 0.3s ease;
@@ -189,6 +206,13 @@ h1 {
     color: white;
 }
 
+/* Theme Text */
+.theme-txt {
+    padding-top: 1px;
+    font-size: 40px;
+}
+
+/* Media Queries for Smaller Screens */
 @media (max-width: 600px) {
     body {
         font-size: 8px;
@@ -223,8 +247,242 @@ h1 {
     }
 }
 
-.theme-txt {
-    padding-top: 1px;
-    font-size: 40px;
-
+/* Additional Transitions and Animations */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s ease-in-out;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* New Styles for Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    /* Start from 0% */
+    background-color: #7FC7D9;
+    transition: width 0.5s ease;
+}
+
+/* Animated Background Gradient */
+@keyframes gradient {
+    0% {
+        background-color: #DCF2F1;
+    }
+
+    50% {
+        background-color: #A4D8D4;
+    }
+
+    100% {
+        background-color: #DCF2F1;
+    }
+}
+
+body {
+    animation: gradient 10s ease infinite;
+    /* Infinite background animation */
+}
+
+
+
+.answer-button,
+#skip-button,
+#close-popup {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #61dafb;
+    color: #282c34;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.theme-button:hover,
+.difficulty-button:hover,
+.answer-button:hover,
+#skip-button:hover , .button:hover{
+    background-color: #21a1f1;
+    /* Darker shade on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+.timer {
+    margin: 20px 0;
+    font-size: 1.5em;
+}
+
+.statistics,
+.leaderboard {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    background-color: #444;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #61dafb;
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.audio-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.audio-controls button {
+    background-color: #21a1f1;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.loader {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 8px solid #0F1035;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.leaderboard-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.leaderboard-modal.visible {
+    display: block;
+}
+
+.focus-visible {
+    outline: 3px solid #FFD700;
+    outline-offset: 2px;
+}
+
+.notification {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+}
+
+.notification.success {
+    background-color: #28a745;
+}
+
+.notification.error {
+    background-color: #dc3545;
+}
+
+.progress-bar {
+    border: 2px solid #0F1035;
+    background-color: #eee;
+}
+
+.progress {
+    background-color: #28a745;
+    transition: width 0.5s ease;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.progress-segment {
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.progress-segment.correct {
+    background-color: #4CAF50; 
+}
+
+.progress-segment.incorrect {
+    background-color: #F44336; 
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress {
+    height: 100%;
+    width: 0; /* Початкова ширина 0% */
+    background-color: #7FC7D9;
+    transition: width 0.5s ease;
+}
+

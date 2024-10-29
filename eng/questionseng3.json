@@ -1,0 +1,274 @@
+{
+    "questions": [
+        {
+            "question": "Translate \"співвідношення\" into English.",
+            "answers": [
+                "Ratio",
+                "Relation",
+                "Proportion",
+                "Comparison"
+            ],
+            "correct": "Ratio"
+        },
+        {
+            "question": "Translate \"взаємодія\" into English.",
+            "answers": [
+                "Interaction",
+                "Cooperation",
+                "Connection",
+                "Collaboration"
+            ],
+            "correct": "Interaction"
+        },
+        {
+            "question": "Translate \"обов'язок\" into English.",
+            "answers": [
+                "Responsibility",
+                "Duty",
+                "Obligation",
+                "Task"
+            ],
+            "correct": "Duty"
+        },
+        {
+            "question": "Translate \"успіх\" into English.",
+            "answers": [
+                "Success",
+                "Achievement",
+                "Accomplishment",
+                "Victory"
+            ],
+            "correct": "Success"
+        },
+        {
+            "question": "Translate \"вплив\" into English.",
+            "answers": [
+                "Impact",
+                "Effect",
+                "Influence",
+                "Power"
+            ],
+            "correct": "Influence"
+        },
+        {
+            "question": "Translate \"вибір\" into English.",
+            "answers": [
+                "Choice",
+                "Option",
+                "Decision",
+                "Selection"
+            ],
+            "correct": "Choice"
+        },
+        {
+            "question": "Translate \"ідентифікація\" into English.",
+            "answers": [
+                "Identification",
+                "Recognition",
+                "Discovery",
+                "Naming"
+            ],
+            "correct": "Identification"
+        },
+        {
+            "question": "Translate \"підхід\" into English.",
+            "answers": [
+                "Approach",
+                "Method",
+                "Strategy",
+                "Way"
+            ],
+            "correct": "Approach"
+        },
+        {
+            "question": "Translate \"принцип\" into English.",
+            "answers": [
+                "Rule",
+                "Principle",
+                "Standard",
+                "Law"
+            ],
+            "correct": "Principle"
+        },
+        {
+            "question": "Translate \"навчання\" into English.",
+            "answers": [
+                "Learning",
+                "Education",
+                "Training",
+                "Instruction"
+            ],
+            "correct": "Learning"
+        },
+        {
+            "question": "Translate \"поведінка\" into English.",
+            "answers": [
+                "Behavior",
+                "Conduct",
+                "Action",
+                "Manner"
+            ],
+            "correct": "Behavior"
+        },
+        {
+            "question": "Translate \"реалізація\" into English.",
+            "answers": [
+                "Implementation",
+                "Realization",
+                "Execution",
+                "Fulfillment"
+            ],
+            "correct": "Implementation"
+        },
+        {
+            "question": "Translate \"ефективність\" into English.",
+            "answers": [
+                "Effectiveness",
+                "Efficiency",
+                "Success",
+                "Impact"
+            ],
+            "correct": "Effectiveness"
+        },
+        {
+            "question": "Translate \"стратегія\" into English.",
+            "answers": [
+                "Plan",
+                "Strategy",
+                "Approach",
+                "Method"
+            ],
+            "correct": "Strategy"
+        },
+        {
+            "question": "Translate \"використання\" into English.",
+            "answers": [
+                "Use",
+                "Application",
+                "Utilization",
+                "Implementation"
+            ],
+            "correct": "Utilization"
+        },
+        {
+            "question": "Translate \"дослідження\" into English.",
+            "answers": [
+                "Research",
+                "Study",
+                "Experiment",
+                "Inquiry"
+            ],
+            "correct": "Research"
+        },
+        {
+            "question": "Translate \"статус\" into English.",
+            "answers": [
+                "State",
+                "Status",
+                "Condition",
+                "Position"
+            ],
+            "correct": "Status"
+        },
+        {
+            "question": "Translate \"рівень\" into English.",
+            "answers": [
+                "Level",
+                "Grade",
+                "Standard",
+                "Rank"
+            ],
+            "correct": "Level"
+        },
+        {
+            "question": "Translate \"основи\" into English.",
+            "answers": [
+                "Bases",
+                "Fundamentals",
+                "Principles",
+                "Basics"
+            ],
+            "correct": "Basics"
+        },
+        {
+            "question": "Translate \"показники\" into English.",
+            "answers": [
+                "Indicators",
+                "Measures",
+                "Metrics",
+                "Standards"
+            ],
+            "correct": "Indicators"
+        },
+        {
+            "question": "Translate \"управління\" into English.",
+            "answers": [
+                "Management",
+                "Administration",
+                "Governance",
+                "Control"
+            ],
+            "correct": "Management"
+        },
+        {
+            "question": "Translate \"засоби\" into English.",
+            "answers": [
+                "Means",
+                "Methods",
+                "Tools",
+                "Resources"
+            ],
+            "correct": "Means"
+        },
+        {
+            "question": "Translate \"методи\" into English.",
+            "answers": [
+                "Techniques",
+                "Methods",
+                "Processes",
+                "Practices"
+            ],
+            "correct": "Methods"
+        },
+        {
+            "question": "Translate \"питання\" into English.",
+            "answers": [
+                "Inquiry",
+                "Question",
+                "Issue",
+                "Topic"
+            ],
+            "correct": "Question"
+        },
+        {
+            "question": "Translate \"концепція\" into English.",
+            "answers": [
+                "Concept",
+                "Idea",
+                "Theory",
+                "Plan"
+            ],
+            "correct": "Concept"
+        },
+        {
+            "question": "Translate \"результати\" into English.",
+            "answers": [
+                "Results",
+                "Outcomes",
+                "Findings",
+                "Conclusions"
+            ],
+            "correct": "Results"
+        },
+        {
+            "question": "Translate \"успіхи\" into English.",
+            "answers": [
+                "Successes",
+                "Achievements",
+                "Accomplishments",
+                "Victories"
+            ],
+            "correct": "Successes"
+        }
+    ]
+}

@@ -1,135 +1,149 @@
 let mainScreen = document.querySelector('.main-screen');
-let startScreen = document.querySelector('.start-screen');
-let question = document.querySelector('.question');
-let answers = document.querySelector('.answers');
-let answer_buttons = document.querySelectorAll('.answer-button');
-let statisticsDisplay = document.querySelector('.statistics');
+let difficulty_buttons = document.querySelectorAll('.difficulty-button');
+let difficulty_block = document.querySelector('.difficulty-buttons');
+let questionScreen = document.querySelector('.question-screen');
+let questionText = document.querySelector('.question');
+let answerButtons = document.querySelectorAll('.answer-button');
 let timerDisplay = document.querySelector('.timer');
-let difficulty_buttons = document.querySelector('.difficulty-buttons')
-
-// Масив питань для різних квізів
-const quiz1 = [
-    {
-        question: 'Яка столиця Франції?',
-        answers: ['Берлін', 'Мадрид', 'Париж', 'Рим'],
-        correct: 'Париж'
-    },
-    {
-        question: 'Який океан найбільший?',
-        answers: ['Тихий', 'Атлантичний', 'Індійський', 'Північний Льодовитий'],
-        correct: 'Тихий'
-    },
-    {
-        question: 'Скільки континентів на Землі?',
-        answers: ['5', '6', '7', '8'],
-        correct: '7'
-    },
-    {
-        question: 'Яка планета найближча до Сонця?',
-        answers: ['Меркурій', 'Венера', 'Марс', 'Земля'],
-        correct: 'Меркурій'
-    }
-    // Додай ще питання
-];
-
-const quiz2 = [
-    {
-        question: 'Яка планета найближча до Сонця',
-        answers: ['Меркурій', 'Венера', 'Марс', 'Земля'],
-        correct: 'Меркурій'
-    }
-    // Додай ще питання
-];
-
-// Додавання складності
-const difficultyLevels = {
-    easy: 15,  // 15 секунд на питання
-    medium: 10, // 10 секунд на питання
-    hard: 5    // 5 секунд на питання
-};
+let statisticsDisplay = document.querySelector('.statistics');
+let restartButton = document.querySelector('.restart-button');
+let homeButton = document.querySelector('.home-button');
+let skipButton = document.getElementById('skip-button');
 
 let selectedQuiz = [];
-let currentDifficulty = difficultyLevels.medium;  // Складність за замовчуванням
-
-// Інші змінні
+let selectedTheme; // тема квіза
+let currentDifficulty;
+let countdownInterval;
 let currentQuestionIndex = 0;
 let correctAnswersCount = 0;
 let totalAnswersCount = 0;
-let countdownInterval;
-let questionLimit = 10;
+let questions_eng, questions_sport, questions_game, questions_geo;
+let questions_eng2, questions_sport2, questions_game2, questions_geo2;
+let questions_eng3, questions_sport3, questions_game3, questions_geo3;
 
-// Обробник натискань для вибору тем
+const difficultyLevels = {
+    easy: 15,
+    medium: 10,
+    hard: 5,
+    impossible: 3
+};
+
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]
+    }
+}
+
+async function getQuestions(file_name) {
+    try {
+        let response = await fetch(file_name);
+        if (!response.ok) throw new Error('Мережевий запит завершився невдало');
+        let questions = await response.json();
+        return questions["questions"];
+    } catch (error) {
+        console.error('Помилка при отриманні запитань:', error);
+    }
+}
+
+Promise.all([
+    getQuestions("eng/questionseng1.json").then(questions => { questions_eng = questions; }),
+    getQuestions("sport/questionssport1.json").then(questions => { questions_sport = questions; }),
+    getQuestions("games/questionsgame1.json").then(questions => { questions_game = questions; }),
+    getQuestions("geo/questionsgeo1.json").then(questions => { questions_geo = questions; }),
+
+    getQuestions("eng/questionseng2.json").then(questions => { questions_eng2 = questions; }),
+    getQuestions("sport/questionssport2.json").then(questions => { questions_sport2 = questions; }),
+    getQuestions("games/questionsgame2.json").then(questions => { questions_game2 = questions; }),
+    getQuestions("geo/questionsgeo2.json").then(questions => { questions_geo2 = questions; }),
+
+    getQuestions("eng/questionseng3.json").then(questions => { questions_eng3 = questions; }),
+    getQuestions("sport/questionssport3.json").then(questions => { questions_sport3 = questions; }),
+    getQuestions("games/questionsgame3.json").then(questions => { questions_game3 = questions; }),
+    getQuestions("geo/questionsgeo3.json").then(questions => { questions_geo3 = questions; }),
+]).then(() => {
+    console.log('Усі запитання завантажено');
+});
+
 document.querySelectorAll('.theme-button').forEach(button => {
     button.addEventListener('click', () => {
-        const selectedTheme = button.textContent;
-        applyTheme(selectedTheme);
+        selectedTheme = button.textContent.trim();
 
-        // Вибір квіза на основі вибраної теми
-        switch (selectedTheme) {
-            case 'Виберіть першу тему квіза':
-                selectedQuiz = quiz1;
-                break;
-            case 'Виберіть другу тему квіза':
-                selectedQuiz = quiz2;
-                break;
-            default:
-                selectedQuiz = quiz1;
+        shuffle(selectedQuiz);
+        mainScreen.style.display = 'none';
+        difficulty_block.style.display = 'block';
+    });
+});
+
+difficulty_buttons.forEach(button => {
+    button.addEventListener('click', function (event) {
+        const selectedDifficulty = event.target.getAttribute('data-difficulty');
+        if (selectedDifficulty === "easy" && selectedTheme == 'Англійська') {
+            selectedQuiz = questions_eng;
+        } else if (selectedDifficulty === "medium" && selectedTheme == 'Англійська') {
+            selectedQuiz = questions_eng2;
+        } else if (selectedDifficulty === "hard" && selectedTheme == 'Англійська') {
+            selectedQuiz = questions_eng3;
+        } else if (selectedDifficulty === "easy" && selectedTheme == 'Географія') {
+            selectedQuiz = questions_geo;
+        } else if (selectedDifficulty === "medium" && selectedTheme == 'Географія') {
+            selectedQuiz = questions_geo2;
+        } else if (selectedDifficulty === "hard" && selectedTheme == 'Географія') {
+            selectedQuiz = questions_geo3;
+        } else if (selectedDifficulty === "easy" && selectedTheme == 'Ігри') {
+            selectedQuiz = questions_game;
+        } else if (selectedDifficulty === "medium" && selectedTheme == 'Ігри') {
+            selectedQuiz = questions_game2;
+        } else if (selectedDifficulty === "hard" && selectedTheme == 'Ігри') {
+            selectedQuiz = questions_game3;
+        } else if (selectedDifficulty === "easy" && selectedTheme == 'Спорт') {
+            selectedQuiz = questions_sport;
+        } else if (selectedDifficulty === "medium" && selectedTheme == 'Спорт') {
+            selectedQuiz = questions_sport2;
+        } else if (selectedDifficulty === "hard" && selectedTheme == 'Спорт') {
+            selectedQuiz = questions_sport3;
+        } else {
+            selectedQuiz = questions_game;
         }
 
-        // Приховуємо екран вибору теми і показуємо екран питань
-        mainScreen.style.display = 'none';
-        difficulty_buttons.style.display = 'none';
-        document.querySelector('.question-screen').style.display = 'block';
+        currentDifficulty = difficultyLevels[selectedDifficulty];
 
+        localStorage.setItem('selectedDifficulty', selectedDifficulty);
+
+        difficulty_block.style.display = 'none';
+        questionScreen.style.display = 'block';
         startQuiz();
     });
 });
 
-// Обробник натискання для вибору складності
-document.querySelector('.difficulty-buttons').addEventListener('click', function (event) {
-    const selectedDifficulty = event.target.textContent;
-
-    if (selectedDifficulty === 'Легко') {
-        currentDifficulty = difficultyLevels.easy;
-    } else if (selectedDifficulty === 'Середньо') {
-        currentDifficulty = difficultyLevels.medium;
-    } else if (selectedDifficulty === 'Важко') {
-        currentDifficulty = difficultyLevels.hard;
-    }
-
-    // Збереження складності в localStorage
-    localStorage.setItem('selectedDifficulty', selectedDifficulty);
-    startQuiz();
-});
-
-// Функція для запуску квіза
 function startQuiz() {
     currentQuestionIndex = 0;
     correctAnswersCount = 0;
     totalAnswersCount = 0;
+    progressBar.innerHTML = '';
     displayNextQuestion();
-    startCountdown();
 }
 
-// Функція показу наступного питання
 function displayNextQuestion() {
+    clearInterval(countdownInterval);
+
     if (currentQuestionIndex < selectedQuiz.length) {
         const currentQuestion = selectedQuiz[currentQuestionIndex];
-
-        // Оновлення тексту питання та варіантів відповідей
-        question.textContent = `${currentQuestionIndex + 1}/${selectedQuiz.length}: ${currentQuestion.question}`;
-
-        answer_buttons.forEach((button, index) => {
+        questionText.textContent = `${currentQuestionIndex + 1}/${selectedQuiz.length}: ${currentQuestion.question}`;
+        answerButtons.forEach((button, index) => {
             button.textContent = currentQuestion.answers[index];
-            button.style.background = ''; // Скидання фону для нових відповідей
+            button.style.background = '';
+            button.classList.remove('fade-in', 'fade-out');
         });
         currentQuestionIndex++;
+        animateQuestionDisplay();
+        startCountdown();
     } else {
         endQuiz();
     }
 }
 
-// Логіка таймера для кожного питання
 function startCountdown() {
     let countdownTime = currentDifficulty;
     timerDisplay.innerHTML = `Залишилось: ${countdownTime} сек`;
@@ -141,86 +155,104 @@ function startCountdown() {
         if (countdownTime <= 0) {
             clearInterval(countdownInterval);
             totalAnswersCount++;
-            displayNextQuestion();
-            startCountdown(); // Запустити таймер для наступного питання
+
+            answerButtons.forEach(button => {
+                if (button.innerHTML.trim() === selectedQuiz[currentQuestionIndex - 1].correct.trim()) {
+                    button.style.background = '#13fa0f';
+                }
+            });
+
+            setTimeout(() => {
+                displayNextQuestion();
+            }, 1000);
         }
     }, 1000);
 }
 
-// Обробка натискання на відповідь
-answer_buttons.forEach(button => {
-    button.addEventListener('click', function () {
-        const currentQuestion = selectedQuiz[currentQuestionIndex - 1];
-        totalAnswersCount++;
-
-        if (button.innerHTML === currentQuestion.correct) {
-            correctAnswersCount++;
-            button.style.background = '#13fa0f'; // зелений для правильної відповіді
-
-            // Додавання звуку правильної відповіді
-            const correctSound = new Audio('correct.mp3');
-            correctSound.play();
-        } else {
-            button.style.background = '#e74c3c'; // червоний для неправильної відповіді
-
-            // Додавання звуку неправильної відповіді
-            const incorrectSound = new Audio('incorrect.mp3');
-            incorrectSound.play();
-        }
-
-        setTimeout(displayNextQuestion, 1000);
-    });
-});
-
-document.querySelectorAll('.theme-button').forEach(button => {
-    button.addEventListener('click', () => {
-        const selectedTheme = button.textContent;
-        applyTheme(selectedTheme);
-
-        // Select quiz based on chosen theme
-        switch (selectedTheme) {
-            case 'Географія':
-                selectedQuiz = questions1.json;
-                break;
-            case 'Виберіть другу тему квіза':
-                selectedQuiz = quiz2;
-                break;
-            case 'Geography Quiz':  // Add this case for geography
-                selectedQuiz = geographyQuiz;
-                break;
-            default:
-                selectedQuiz = quiz1;
-        }
-
-        // Hide theme selection screen and show question screen
-        mainScreen.style.display = 'none';
-        document.querySelector('.question-screen').style.display = 'block';
-
-        startQuiz();
-    });
-});
+function animateQuestionDisplay() {
+    questionText.classList.add('fade-in');
+    setTimeout(() => {
+        questionText.classList.remove('fade-in');
+    }, 500);
+}
 
 
-// Функція завершення квіза
+
 function endQuiz() {
-    clearInterval(countdownInterval); // Зупиняємо таймер
-    question.textContent = 'Квіз завершено!';
-    answers.innerHTML = ''; // Очищення варіантів відповідей
-    timerDisplay.innerHTML = ''; // Приховуємо таймер
-    statisticsDisplay.textContent = `Ви відповіли правильно на ${correctAnswersCount} з ${totalAnswersCount} питань!`;
+    questionScreen.style.display = 'none';
+    statisticsDisplay.style.display = 'block';
+    restartButton.style.display = "block";
+    homeButton.style.display = "block";
+    let result = Math.round((correctAnswersCount / selectedQuiz.length) * 100);
+    statisticsDisplay.innerHTML = `<h2>Вікторина завершена!</h2><p>Ваш результат: ${result}% правильних відповідей.</p>`;
+
 }
 
-// Функція зміни теми та стилю фону
-function applyTheme(theme) {
-    const themeColors = {
-        'Виберіть першу тему квіза': '#365486',
-        'Виберіть другу тему квіза': '#E74C3C',
-        'Виберіть третю тему квіза': '#8E44AD',
-        'Виберіть четверту тему квіза': '#8E44AD',
-    };
 
-    document.body.style.backgroundColor = themeColors[theme];
-    const header = document.querySelector('header');
-    header.textContent = theme + ' вибрано!';
+homeButton.addEventListener('click', () => {
+    mainScreen.style.display = 'block'
+    statisticsDisplay.style.display = 'none'
+    homeButton.style.display = 'none'
+    restartButton.style.display = 'none'
+});
+
+restartButton.addEventListener('click', () => {
+    statisticsDisplay.style.display = 'none'
+    homeButton.style.display = 'none'
+    restartButton.style.display = 'none'
+    questionScreen.style.display = 'block';
+    progressBar.innerHTML = '';
+    startQuiz();
+});
+
+
+let progressBar = document.querySelector('.progress-bar');
+
+function updateProgress(isCorrect) {
+    let segment = document.createElement('div');
+    segment.classList.add('progress-segment');
+    segment.style.width = `${100 / selectedQuiz.length}%`;
+
+    if (isCorrect) {
+        segment.classList.add('correct');
+    } else {
+        segment.classList.add('incorrect');
+    }
+
+
+    progressBar.appendChild(segment);
 }
 
+
+// Existing code for answer buttons
+answerButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        let selectedAnswer = button.innerHTML.trim();
+        let correctAnswer = selectedQuiz[currentQuestionIndex - 1].correct.trim();
+        
+        console.log(selectedAnswer);
+        console.log(correctAnswer);
+        
+        if (selectedAnswer == correctAnswer) {
+            button.style.background = '#4CAF50';
+            correctAnswersCount++;
+            updateProgress(true);
+            console.log("Правильно");
+        } else {
+            button.style.background = '#ff4d4d';
+            updateProgress(false);
+            console.log("Неправильно");
+        }
+
+        totalAnswersCount++;
+        
+        setTimeout(() => {
+            displayNextQuestion();
+        }, 1000);
+    });
+});
+
+skipButton.addEventListener('click', () => {
+    totalAnswersCount++;
+    displayNextQuestion();
+});

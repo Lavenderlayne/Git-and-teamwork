@@ -1,0 +1,124 @@
+{
+    "questions": [
+      {
+        "question": "Яка гра стала першою, що використала технологію 3D-графіки?",
+        "answers": [
+          "Wolfenstein 3D",
+          "Doom",
+          "Quake",
+          "Battlezone"
+        ],
+        "correct": "Battlezone"
+      },
+      {
+        "question": "Яка гра з серії Final Fantasy була першою, що включала 3D-графіку?",
+        "answers": [
+          "Final Fantasy VII",
+          "Final Fantasy VI",
+          "Final Fantasy VIII",
+          "Final Fantasy IX"
+        ],
+        "correct": "Final Fantasy VII"
+      },
+      {
+        "question": "У якому році була випущена гра Dark Souls?",
+        "answers": [
+          "2010",
+          "2011",
+          "2012",
+          "2013"
+        ],
+        "correct": "2011"
+      },
+      {
+        "question": "Яка гра є продовженням серії Half-Life та має назву, що складається з однієї букви?",
+        "answers": [
+          "Half-Life 2: Episode One",
+          "Half-Life: Alyx",
+          "Half-Life 2: Episode Two",
+          "Half-Life 3"
+        ],
+        "correct": "Half-Life: Alyx"
+      },
+      {
+        "question": "Яка гра, випущена в 1997 році, стала першим проектом, що поєднував елементи рольових ігор та тактики?",
+        "answers": [
+          "Final Fantasy Tactics",
+          "X-Com: UFO Defense",
+          "Baldur's Gate",
+          "Heroes of Might and Magic"
+        ],
+        "correct": "Final Fantasy Tactics"
+      },
+      {
+        "question": "Яка гра з відкритим світом була визнана найбільш революційною у своєму жанрі завдяки своїй системі взаємодії з навколишнім світом?",
+        "answers": [
+          "The Legend of Zelda: Breath of the Wild",
+          "Skyrim",
+          "Red Dead Redemption 2",
+          "GTA V"
+        ],
+        "correct": "The Legend of Zelda: Breath of the Wild"
+      },
+      {
+        "question": "Яка гра є частиною серії Metal Gear та представила концепцію стелс-гри?",
+        "answers": [
+          "Metal Gear Solid",
+          "Metal Gear",
+          "Metal Gear Solid V: The Phantom Pain",
+          "Metal Gear Rising: Revengeance"
+        ],
+        "correct": "Metal Gear"
+      },
+      {
+        "question": "У якому році була випущена гра World of Warcraft?",
+        "answers": [
+          "2002",
+          "2004",
+          "2005",
+          "2006"
+        ],
+        "correct": "2004"
+      },
+      {
+        "question": "Яка гра є визнаним еталоном для платформерів і вплинула на розвиток цього жанру в 80-х?",
+        "answers": [
+          "Super Mario Bros.",
+          "Sonic the Hedgehog",
+          "Donkey Kong",
+          "Mega Man"
+        ],
+        "correct": "Super Mario Bros."
+      },
+      {
+        "question": "Яка гра стала основою для розвитку жанру 'Battle Royale'?",
+        "answers": [
+          "PUBG",
+          "H1Z1",
+          "DayZ",
+          "Fortnite"
+        ],
+        "correct": "H1Z1"
+      },
+      {
+        "question": "У якій грі гравець повинен був збирати колекцію карток, щоб створити власну колоду для битв?",
+        "answers": [
+          "Magic: The Gathering Online",
+          "Hearthstone",
+          "Yu-Gi-Oh! Duel Links",
+          "Slay the Spire"
+        ],
+        "correct": "Hearthstone"
+      },
+      {
+        "question": "Яка гра з 2015 року отримала нагороду 'Гра року' на The Game Awards, відзначаючи високий рівень дизайну та оповідання?",
+        "answers": [
+          "The Witcher 3: Wild Hunt",
+          "Fallout 4",
+          "Bloodborne",
+          "Dark Souls III"
+        ],
+        "correct": "The Witcher 3: Wild Hunt"
+      }
+    ]
+  }
