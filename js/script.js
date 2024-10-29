@@ -9,7 +9,6 @@ let statisticsDisplay = document.querySelector('.statistics');
 let restartButton = document.querySelector('.restart-button');
 let homeButton = document.querySelector('.home-button');
 let skipButton = document.getElementById('skip-button');
-let muteButton = document.getElementById('mute-button');
 
 let selectedQuiz = [];
 let selectedTheme; // тема квіза
@@ -18,7 +17,6 @@ let countdownInterval;
 let currentQuestionIndex = 0;
 let correctAnswersCount = 0;
 let totalAnswersCount = 0;
-let isMuted = false; // Стан звуку (вимкнено чи ні)
 let questions_eng, questions_sport, questions_game, questions_geo;
 let questions_eng2, questions_sport2, questions_game2, questions_geo2;
 let questions_eng3, questions_sport3, questions_game3, questions_geo3;
@@ -29,16 +27,6 @@ const difficultyLevels = {
     hard: 5,
     impossible: 3
 };
-
-const audio = {
-    correct: new Audio('correct.mp3'),
-    incorrect: new Audio('incorrect.mp3'),
-    background: new Audio('background.mp3')
-};
-
-audio.background.loop = true; // Фонова музика повторюється
-// audio.background.play()
-// audio.background.volume = 0
 
 
 function shuffle(array) {
@@ -134,7 +122,6 @@ function startQuiz() {
     correctAnswersCount = 0;
     totalAnswersCount = 0;
     progressBar.innerHTML = '';
-    // audio.background.play();
     displayNextQuestion();
 }
 
@@ -201,14 +188,7 @@ function endQuiz() {
 
 }
 
-muteButton.addEventListener('click', () => {
-    isMuted = !isMuted;
-    if (isMuted) {
-        audio.background.pause();
-    } else {
-        audio.background.play();
-    }
-});
+
 homeButton.addEventListener('click', () => {
     mainScreen.style.display = 'block'
     statisticsDisplay.style.display = 'none'
@@ -258,12 +238,10 @@ answerButtons.forEach((button, index) => {
             correctAnswersCount++;
             updateProgress(true);
             console.log("Правильно");
-            // if (!isMuted && audio.correct) audio.correct.play();
         } else {
             button.style.background = '#ff4d4d';
             updateProgress(false);
             console.log("Неправильно");
-            // if (!isMuted && audio.incorrect) audio.incorrect.play();
         }
 
         totalAnswersCount++;
